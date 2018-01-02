@@ -1,0 +1,175 @@
+<%include ./personal_header.ejs%>
+<link rel="stylesheet" href="./css/personal/orderDetail.css">
+<div class="personal">
+    <div class="container">
+        <div class="page-content">
+            <div class="col-md-3">
+                <% include ./personal_content %>
+            </div>
+            <div class="col-md-9 shop-profile">
+                <div class="main-right">
+                    <div class="panel">
+                            <div class="panel-body">
+                                <div class="row waitpay">
+                                    <div class="col-xs-12 col-sm-4 ">
+                                        <h3 class="font-size-20">
+                                            <i class="glyphicon glyphicon-credit-card orange"></i>
+                                            <span class="waitBuy">待支付</span>
+                                        </h3>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8  order-btn">
+                                        <a href="/order#/order" class="orderCancel" @click="remOrder()">
+                                            <span >取消订单</span>
+                                        </a>
+                                        <a href="" class="nowPay"><span >立即付款</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="panel">
+                            <div class="panel-body">
+                                <div class="procedure">
+                                    <li class="col-xs-3 xiadan">
+                                        <div class="text-center xiaDan">
+                                            <i class="iconfont icon-xiadan"></i>
+                                        </div>
+                                        <span class="text-center name">下单</span>
+                                        <span class="text-center" id="order-date" style="color:#a3afb7">2017-12-03 18:33:49</span>
+                                    </li>
+
+                                    <li class="col-xs-3 xiadan grey" style="margin-top: -2.5px">
+                                        <div class="text-center fukuan">
+                                            <i class="glyphicon glyphicon-credit-card"></i>
+                                        </div>
+                                        <span class="text-center name">付款</span>
+                                    </li>
+
+                                    <li class="col-xs-3 xiadan grey">
+                                        <div class="text-center fahuo">
+                                            <i class="iconfont icon-icon104"></i>
+                                        </div>
+                                        <span class="text-center name">发货</span>
+                                    </li>
+
+                                    <li class="col-xs-3 xiadan grey">
+                                        <div class="text-center complete">
+                                            <i class="iconfont icon-duihao"></i>
+                                        </div>
+                                        <span class="text-center name">完成</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="panel">
+                            <div class="panel-body">
+                                <div class="goodsName table-responsive">
+                                    <table class="table">
+                                        <tr id="table-one">
+                                            <th width="300">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">数量</th>
+                                            <th class="text-center">运费</th>
+                                            <th class="text-center">小计</th>
+                                        </tr>
+                                        <tr id="table-two">
+                                            <td class="td-left">
+                                                <a href="/shopCart" @click="toShop(shopDetail.id)">
+                                                    <img :src=shopDetail.img alt="">
+                                                </a>
+                                                <span>
+                                                    <a href="/shopCart" @click="toShop(shopDetail.id)">
+                                                        {{shopDetail.title}}</a>
+                                                    <p>{{shopDetail.price}}.00元 X {{shopDetail.value}}</p>
+                                                </span>
+                                            </td>
+                                            <td class="text-center">{{shopDetail.price}}.00元</td>
+                                            <td class="text-center">{{shopDetail.value}}</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">{{shopDetail.price * shopDetail.value}}.00元</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="panel order-xq">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-4  col-md-3 col-lg-2 text-right">订单号:</div>
+                                    <div class="col-xs-8  col-md-9 col-lg-10">2017120318334960612</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-4  col-md-3 col-lg-2 text-right">支付方式:</div>
+                                    <div class="col-xs-8  col-md-9 col-lg-10">在线支付</div>
+                                </div>
+                                <hr>
+
+                                <div class="row">
+                                    <div class="col-xs-4  col-md-3 col-lg-2 text-right">配送方式:</div>
+                                    <div class="col-xs-8  col-md-9 col-lg-10">快递配送</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-4  col-md-3 col-lg-2 text-right">收货信息:</div>
+                                    <div class="col-xs-8  col-md-9 col-lg-10">12345 13111111111 山东省 济南市 历下区 qwertyu</div>
+                                </div>
+                                <hr>
+
+                                <div class="row">
+                                    <div class="col-xs-4  col-md-3 col-lg-2 text-right">买家留言:</div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    <div class="panel order-price">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <th>订单金额</th>
+                                            <th></th>
+                                            <th>运费</th>
+                                            <th></th>
+                                            <th>优惠</th>
+                                            <th></th>
+                                            <th>涨价/减免</th>
+                                            <th></th>
+                                            <th>实付金额</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>{{orderTotal}}.00元</span>
+                                            </td>
+                                            <td>+</td>
+                                            <td>
+                                                <span>0.0元</span>
+                                            </td>
+                                            <td>+</td>
+                                            <td>
+                                                <span>0.0元</span>
+                                            </td>
+                                            <td>+</td>
+                                            <td>
+                                                <span>0.0元</span>
+                                            </td>
+                                            <td>=</td>
+                                            <td>
+                                                <span>{{orderTotal}}.00元</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/personal/orderDetail_vue.js"></script>
+<%include ./footer2.ejs%>

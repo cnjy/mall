@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/font/download/ksyfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="./font/download/myFont/iconfont.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/boot/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/personal/personal.css">
+    <link rel="stylesheet" href="./css/personal/order.css">
+    <link rel="stylesheet" href="./css/personal/collect.css">
+    <link rel="stylesheet" href="./css/personal/coupon.css">
+    <link rel="stylesheet" href="./css/personal/site.css">
+    <link rel="stylesheet" href="./css/personal/consume.css">
+    <link rel="stylesheet" href="./css/selfHeader.css">
+    <link rel="stylesheet" href="./css/addShop.css">
+    <title><%= title%></title>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/vue-router.min.js"></script>
+    <script src="./js/vue-resource.min.js"></script>
+</head>
+<body>
+    <div class="selfHeader">
+    <div class="container">
+        <div class="row">
+            <div class="selfHeader-box">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/index/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="selfHeader-list">
+                    <ul>
+                        <li>
+                            <a href="/">首页</a>
+                        </li>
+                        <li>
+                            <a href="/dcl/join">加入我们</a>
+                        </li>
+                        <li>
+                            <a href="/dcl/contact">联系我们</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/dcl/company/"
+                               role="button" aria-haspopup="true"aria-expanded="false" >
+                                关于公司<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/dcl/company/">公司简介</a></li>
+                                <li><a href="/dcl/company#/xianshang">线上反馈</a></li>
+                                <li><a href="/dcl/join">加入我们</a></li>
+                                <li><a href="/dcl/contact">联系我们</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/shopElectronics"
+                               role="button" aria-haspopup="true" aria-expanded="false">
+                                电子产品<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/shopElectronics#/phoneHot">热门手机</a></li>
+                                <li><a href="/shopElectronics#/monitor">耳机音响</a></li>
+                                <li><a href="/shopElectronics#/phoneParts">手机配件</a></li>
+                                <li><a href="/shopElectronics#/products">周边产品</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                新闻中心<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ksy/new_center#/news">新闻动态</a></li>
+                                <li><a href="/ksy/new_center#/guan">官网新闻</a></li>
+                                <li><a href="/ksy/new_center#/zixun">最新资讯</a></li>
+                                <li><a href="/ksy/new_center#/imgshow">图片展示</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 小屏幕时 -->
+                <div class="people fr">
+                    <span id="people-small">
+                        <i class="iconfont icon-geren changebefore"></i>
+                        <i class="iconfont icon-people changelater change"></i>
+                    </span>
+                    <span id="shopcar-samll">
+                        <i class="iconfont icon-sangangy changebefore2"></i>
+                        <i class="iconfont icon-cross changelater2 change"></i>
+                    </span>
+                </div>
+
+                <div class="self-center fr">
+                    <ul>
+                        <li class="self-name">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="user">
+                                    <img src="/images/index/user%20(2).jpg" alt="">
+                                </span>
+                                {{userName}}
+                                <span class="caret">
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/personal"><i class="iconfont icon-geren"></i>个人中心</a></li>
+                                <li><a href="/order#/order"><i class="iconfont icon-dingdan"></i>我的订单</a></li>
+                                <li><a href="/collect"><i class="iconfont icon-shoucang"></i>我的收藏</a></li>
+                                <li><a href="/coupon#/order"><i class="iconfont icon-youhuiquan"></i>我的优惠券</a></li>
+                                <li><a href=""><i class="iconfont icon-shezhi"></i>账户设置</a></li>
+                                <li>
+                                    <a href="/" @click="exit()">
+                                        <i class="iconfont icon-tuichu"></i>退出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="self-shopCar" id="self-shopCar">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                <span class="carIcon">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                                </span>
+                                购物车
+                            </a>
+                            <span class="shopNumber">{{sumShop}}</span>
+                            <ul class="dropdown-menu">
+                                <li class="carHeader">
+                                    <h5 class="fl">购物车</h5>
+                                    <span class="shopNum fr">共<span>{{sumShop}}</span>件商品</span>
+                                </li>
+                                <li class="shopCarList">
+                                    <div class="shopCarList-one" :data_id="item.id" v-for="(item,index) of userShop">
+                                        <div class="fl">
+                                            <a href="/shopCart" @click="toShopCart(item.id)">
+                                                <img :src=item.img alt="">
+                                            </a>
+                                            <a href="/shopCart" @click="toShopCart(item.id)">
+                                                <span class="">{{item.title}}</span>
+                                            </a>
+                                        </div>
+                                        <div class="fr shopCarList-one-price">
+                                            <input type="text" v-model="item.value" style="display: none">
+                                            <p>{{item.price}}.00元 x
+                                                <i style="color: red; font-size: 16px;">{{item.value}}</i>
+                                            </p>
+                                            <i class="iconfont icon-shanchu1 fr rem-userShop"
+                                               @click.stop="remUserShop(item,item.id)"></i>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <div class="shopCarfoot">
+                                    <span class="fl shopCarfoot-allPrice">{{userTotal}}.00元</span>
+                                    <span class="fr shopCarfoot-buy">
+                                        <a href="/addShopCart" style="color:white">去购物车结算</a>
+                                    </span>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="/js/personal/personal_header.js"></script>

@@ -1,0 +1,206 @@
+<%include ./index_header.ejs%>
+<link rel="stylesheet" href="/css/join.css">
+<div class="container">
+	<div class="company-title">
+		<ul class="met-com-nav-ul">
+			<li><a href="/dcl/company" title="公司简介" class="com-link" id="com-active" alt="公司简介" title="公司简介">公司简介</a></li>
+			<li><a href="/dcl/company#/xianshang" title="线上反馈" class="com-link line-find" alt="线上反馈" title="线上反馈">线上反馈</a></li>
+			<li><a href="/dcl/join" title="加入我们" class="com-link" alt="加入我们" title="加入我们">加入我们</a></li>
+			<li><a href="/dcl/contact" title="联系我们" class="com-link" alt="联系我们" title="联系我们">联系我们</a></li>
+		</ul>
+	</div>
+	<!-- 加入我们 -->
+	<div class="join-box">
+		<div class="join-con-list">
+			<div class="join-title">
+				<h2>招聘列表</h2>
+			</div>
+			<ul class="join-list-head">
+				<li class="col-md-4 ">职位</li>
+				<li class="col-md-2 join-2">招聘人数</li>
+				<li class="col-md-2  join-2">工作地点</li>
+				<li class="col-md-2  join-2">薪资</li>
+				<li class="col-md-2  join-2" style="border-right:none">操作</li>
+			</ul>
+			<ul class="join-list-body">
+				<% for(let item of join){%>
+				<li @click="dianji($event)" class="join-list-body-one">
+				<img src="/images/about/2.jpg" alt="" @load="loads" style="display:none">
+					<div class="col-md-4 join-php join-hang">
+						<%=item.job%>
+						<i class="glyphicon glyphicon-chevron-down"></i>
+						<i class="glyphicon glyphicon-chevron-up" style="display:none"></i>
+					</div>
+					<div class="col-md-2 join-2 join-hang">
+						<i class="glyphicon glyphicon-user"></i>
+						10	
+					</div>
+					<div class="col-md-2 join-2 join-hang">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						长沙市	
+					</div>
+					<div class="col-md-2 join-2 join-hang">
+						<i class="glyphicon glyphicon-briefcase"></i>
+						面试
+					</div>
+					<div class="col-md-2 join-2 join-hang shenjing">
+						<a href="javascript:void(0)" class="join-btn" @click="shenqing">立即申请</a>
+					</div>
+					
+
+					
+
+					<div class="join-hide">
+						<div class="join-hide-main">
+							<p>
+								<strong>主要工作内容:</strong>
+							</p>
+							<div>
+								
+								<span style="font-size:13px;"><%=item.content%></span>
+							</div>
+							<div class="main-kong"></div>
+							<div class="main-wangwei">
+								<strong>岗位要求:</strong>
+							</div>
+							<ol class="list-paddingleft-2">
+								<li>
+									<p>
+										<span style="font-size:13px;"><%=item.request%></span>
+									</p>
+								</li>
+							</ol>
+							<a href="javascript:void(0)" class="join-hide-btn" @click="shenqing">立即申请</a>
+						</div>
+					</div>	
+				</li>
+				<%}%>
+			</ul>
+	<!-- 立即申请 -->
+			<div class="join-box-up">
+				<div class="join-up-item">
+					<div class="join-apply">
+						<form  action="">
+							<div class="apply-header">
+								<button class="apply-close">
+									<span aria-hidden="true" class="apply-close-span">×</span>
+								</button>
+								<img src="/images/about/1495680343.png" alt="电子数码" title="电子数码">
+								<h3 class="apply-title">立即申请</h3>
+							</div>
+							<div class="apply-body">
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="姓名">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="apply-label">性别</label>
+									<div>
+										<div class="radio-custom radio-primary">
+											<input type="radio" name="sex" id="optionsRadios1" value="先生" checked>
+											<label class="radio-check">先生</label>
+										</div>
+										<div class="radio-custom radio-primary">
+											<input type="radio" name="sex" id="optionsRadios1" value="女士" >
+											<label class="radio-check">女士</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="出生年月">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="籍贯">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="联系电话">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="邮编">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="E-mail">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="学历">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="专业">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="学校">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<input type="text" class="apply-line" placeholder="通信地址">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<textarea class="form-control" rows="5" placeholder="所获奖励"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<textarea class="form-control " rows="5" placeholder="工作经历"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<textarea class="form-control" rows="5" placeholder="业余爱好"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="apply-label">近期照片</label>
+									<div>
+										<div class="shangchuan">
+											<span class="btn btn-primary btn-file shangchuan-btn">
+												<i class="glyphicon glyphicon-open" aria-hidden="true"></i>
+												<input type="file" multiple id="shangchuan-choose" onchange="readFile(this)" style="background:pink">
+											</span>
+											<div id="text-name"></div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="code-div">
+										<input type="text" class="apply-line" placeholder="验证码">
+										<span>
+											<img src="/images/about/ajax.png" alt="">
+										</span>
+									</div>
+								</div>
+
+							</div>
+							<div class="apply-footer">
+								<button type="submit" class="btn btn-primary btn-squared">提交</button>
+								<button type="button" class="btn btn-default btn-squared" data-dismiss="modal">取消</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+	<script src="/js/join_vue.js"></script>
+	<script src="/js/join.js"></script>
+<%include ./index_footer.ejs%>

@@ -1,0 +1,198 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+ul,li{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+
+}
+.login-header{
+	padding:0px 15px;
+	margin:0 126.5px;
+	overflow:hidden;
+	height: 80px;
+}
+@media(max-width: 768px){
+	.login-header{
+		margin:0;
+	}
+}
+.row-header{
+	height: 100%;
+}
+.login-logo{
+	height: 100%;
+}
+.login-logo li{
+	float:left;
+	height: 80px;
+	line-height:80px;
+	font-size:22px;
+}
+.login-logo li i{
+	color:#ddd;
+	font-size:22px;
+	padding:0px 10px;
+}
+.re-main{
+	width: 100%; 
+	overflow: hidden; 
+	background: #f5f5f5; 
+}
+.re-box{
+	box-sizing: border-box; 
+	margin:50px auto; 
+	max-width: 400px; 
+	height: auto; 
+	background-color:white; 
+	border:1px solid #ccc; 
+	border-radius: 5px; 
+	padding:20px 30px; 
+	line-height: 35px; 
+	overflow: hidden; 
+}
+.zhuce-header{
+	text-align:center;
+	font-size:24px;
+	margin-bottom:20px;
+	padding-left:120px;
+}
+@media(max-width:375px){
+	.zhuce-header{
+		padding-left:100px;
+	}
+}
+@media(max-width:320px){
+	.zhuce-header{
+		padding-left:80px;
+	}
+}
+.fl{float: left; }
+.fr{float: right; }
+/*表单内容*/
+.form-group{
+	margin-bottom:0;
+}
+.form-group span{
+	width: 35px; 
+	height: 35px; 
+	border:1px solid #aaa; 
+	border-right:none; 
+	display: inline-block; 
+	text-align: center; 
+}
+.form-group i{
+	color:#aaa;
+}
+.re-content input{
+	width: 85%; 
+	height: 35px;
+	line-height: 35px; 
+	font-size: 15px; 
+	border:none; 
+	border:1px solid #aaa; 
+	padding-left:10px; 
+	outline: medium; 
+	background: white; 
+}
+.panduan{
+	height: 25px; 
+	width: 100%; 
+	font-size: 12px; 
+	line-height: 16px; 
+	color: red; 
+}
+#yzm{
+	width: 100%; 
+	height: 37px; 
+}
+/*.yanzhengma{
+	border:1px solid #ccc;
+	width: 32%; 
+	height:43px; 
+	padding:5px;
+	text-align:center;
+	font-size:5px;
+	cursor:pointer;
+	
+}*/
+.yanzheng{
+	padding-right:16px;
+	box-sizing:border-box;
+}
+.yanzheng input{
+	width: 50%; 
+}
+.yanzhengma{
+	width: 32%; 
+	height:37px; 
+}
+.yanzhengma img{
+	width: 100%; 
+	height: 37px; 
+	cursor:pointer;
+
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc;  
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color: #ccc;
+}
+
+input::-ms-input-placeholder{
+     color:#ccc;
+}
+
+input::-webkit-input-placeholder{
+    color: #ccc;
+}
+/*注册按钮*/
+.btn1{
+	width: 95%;
+	height:40px;
+	margin-bottom:15px;
+}
+/*去登录链接*/
+.go-login{
+	text-align: center; 
+	font-size: 14px; 
+	margin-top: 10px; 
+	padding-right:16px;
+}
+.go-login a{
+	color:#5bc0de; 
+}
+@media(max-width: 879px){
+	.re-header-l span{
+		display: none; 
+	}
+}
+@media(max-width: 490px){
+	.login-header img{width: 100%; margin-top: 30px; }
+	.back{margin-right: 10px; }
+	.form-group span{width: 10%; }
+	.form-group input{width: 82%; }
+	.yanzheng input{width: 50%; }
+	.re-box{margin:10px; padding:20px; }
+	.yanzhengma{float:left; }
+}
+@media(max-width:767px){
+	.yanzheng{
+		padding-right:0;
+	}
+}
+@media(max-width:490px){
+	.login-logo li{
+		line-height:normal;
+	}
+}
+.login-footer {
+	padding:30px;
+	text-align:center;
+	color:#777;
+}
+

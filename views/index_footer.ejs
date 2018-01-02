@@ -1,0 +1,74 @@
+ <!--页面底部-->
+    <div class="foo-box-sec">
+           <div class="foo-box col-sm-12 text-center">
+               <div class="container met-foonav">
+                   <div class="foonav-left col-md-8">
+                       <div class="col-md-2 col-sm-2 col-xs-12 list" v-for="(item,index) of fooList"
+                        @click="footerNavList(index)">
+                           <h4>
+                                <!-- y -->
+                               <i class="iconfont icon-iconfonticonfonti2  downicon"></i>
+                               <a href="javascript:void(0);">{{item.h4[0]}}</a>
+                           </h4>
+                           <ul class="left-list show-list">
+                               <li>
+                                   <a :href=item.li01[1] class="stop">
+                                       <i class="iconfont"></i>
+                                       {{item.li01[0]}}
+                                   </a>
+                               </li>
+                               <li>
+                                   <a :href=item.li02[1] class="stop">
+                                       <i class="iconfont"></i>
+                                       {{item.li02[0]}}
+                                   </a>
+                               </li>
+                               <li>
+                                   <a :href=item.li03[1] class="stop">
+                                       <i class="iconfont"></i>
+                                       <img src="/images/index/1495094914.jpg" alt="" @load="icon(index)"
+                                            class="foo-img">
+                                       {{item.li03[0]}}
+                                   </a>
+                               </li>
+                               <li>
+                                   <a :href=item.li04[1] class="stop">
+                                       <i class="iconfont"></i>
+                                       {{item.li04[0]}}
+                                   </a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="foonav-right col-md-4 col-ms-12 col-xs-12 info  float-right">
+                       <h3>400-000-0000</h3>
+                       <div class="clearfix">
+                           <p>周一至周日 9:00-18:00（仅收市话费）</p>
+                       </div>
+                       <a href="" class="foo-leave">
+                           <i class="glyphicon glyphicon-question-sign"></i>
+                           在线留言
+                       </a>
+                   </div>
+               </div>
+           </div>
+    </div>
+    <footer>
+        <div class="footer-box">
+            <div class="container footer-last">
+                <div class="foo-last-box">
+                    <span>Copyright © 2017, MetInfo Digital Co., Ltd. All Rights Reserved.</span>
+                    <span>官方在线商城</span>
+                    <span>Powered by <a href="">MetInfo</a> 5.3.19</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="to-top">
+        <i class="glyphicon glyphicon-arrow-up"></i>
+    </button>
+</body>
+</html>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/index.js"></script>
+<script src='/js/footer.js'></script>

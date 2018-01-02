@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>账号设置</title>
+	<link rel="stylesheet" href="/font/download/tubiao/iconfont.css">
+	 <link rel="stylesheet" href="/css/boot/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/personal/account.css">
+	<!--让IE8 支持HTML5新标签 和 Media-->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="user">
+		<!-- 头部 -->
+		<div class="container acc-container">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 account-logo">
+					<ul>
+						<li>
+							<a href="/">
+								<img src="/images/about/1495680343.png" alt="返回首页" title="返回首页">
+							</a>
+						</li>
+						<li>
+							<i>|</i>
+							会员中心
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-6 col-sm-6 urser-info" v-for="item of userMessage">
+					<ol class="account-right">
+						<li>
+							<a href="/personal" style="color: #666; font-size: 15px;">{{item.name}}</a>
+						</li>
+						<span>&nbsp;&nbsp; |&nbsp;&nbsp; </span>
+						<li>
+							<a href="/" @click="exit()">退出登录</a>
+						</li>
+						<span>&nbsp;&nbsp; |&nbsp;&nbsp; </span>
+						<li>
+							<a href="/">返回首页</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<!-- 主体 -->
+		<div class="account-main">
+			<div class="container">
+				<div class="account-number">
+					<div class="row">
+						<div class="col-sm-3 sidebar">
+							<div class="sidebar-box">
+								<div class="sidebar-list-group">
+									<div class="list-group-item"><router-link to="/geren">个人信息</router-link></div>
+									<div class="list-group-item"><router-link to="/zhanghao">账号安全</router-link></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-9  met-member-profile">
+							<!-- 个人信息 -->
+
+							<!-- 账号安全 -->
+							<router-view></router-view>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+	<!-- footer脚部 -->
+	<div class="login-footer">
+		<p>
+			Copyright © 2017, MetInfo Digital Co., Ltd. All Rights Reserved.
+		</p>
+		<p>
+			官方在线商城
+		</p>
+	</div>
+	<template id="geren">
+	<div>
+		<div class="panel panel-default ">
+			<div class="panel-heading">个人信息</div>
+			<div class="panel-body member-basic met-index" v-for="item of user">
+				<div class="row ">
+					<div class="col-xs-3">会员名</div>
+					<div class="col-xs-9">{{item.name}}</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3">会员类型</div>
+					<div class="col-xs-9">普通会员</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3">登录次数</div>
+					<div class="col-xs-9">1</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3">最后登录IP</div>
+					<div class="col-xs-9">0</div>
+				</div>
+			</div>
+		</div>
+		<form action="" method="post" class="met-form">
+			<div class="panel panel-default">
+				<div class="panel-heading">更多资料</div>
+				<div class="panel-body met-index">
+					<div class="form-group met-form-choice ">
+						<div class="row">
+							<div class="col-md-3 file-title"></div>
+							<div class="col-md-9">
+								<span class="file-input">
+									<div class="file-kuang">
+										<div class="file-close">×</div>
+										<div class="file-body">
+											<div class="file-main">
+												<div class="file-box" id="readimg">
+													<img src="/images/about/user.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="file-upload hide">
+										<div class="progress file-progress">
+											 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+										</div>
+									</div>
+									<button type="button" title="取消进行中的上传" class="btn btn-default" style="display:none">
+										<i class="glyphicon glyphicon-ban-circle"></i>取消
+									</button>
+									<div class="btn btn-success btn-file">
+										<i class="glyphicon glyphicon-folder-open"></i>"&nbsp;选择"
+										<input type="file" class="file-choose" onchange="readFile(this)">
+
+									</div>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group met-form-choice">
+						<div class="row">
+							<div class="col-md-3 file-title">公司名称</div>
+							<div class="col-md-9">
+								<input type="text" class="form-control" placeholder="公司名称">
+							</div>
+						</div>
+					</div>
+					<div class="form-group met-form-choice">
+						<div class="row">
+							<div class="col-md-3 file-title">公司传真</div>
+							<div class="col-md-9">
+								<input type="text" class="form-control" placeholder="公司传真">
+							</div>
+						</div>
+					</div>
+					<div class="form-group met-form-choice">
+						<div class="row">
+							<div class="col-md-3 file-title">公司联系地址</div>
+							<div class="col-md-9">
+								<input type="text" class="form-control" placeholder="公司联系地址">
+							</div>
+						</div>
+					</div>
+					<div class="form-group met-form-choice">
+						<div class="row">
+							<div class="col-md-3 file-title">公司邮政编码</div>
+							<div class="col-md-9">
+								<input type="text" class="form-control" placeholder="公司邮政编码">
+							</div>
+						</div>
+					</div>
+					<div class="form-group met-form-choice">
+						<div class="row">
+							<div class="col-md-3 file-title">公司网址</div>
+							<div class="col-md-9">
+								<input type="text" class="form-control" placeholder="公司网址">
+							</div>
+						</div>
+					</div>
+					<div class="row" style="border-bottom:none">
+						<div class="col-xs-3 file-title"></div>
+						<div class="col-xs-9">
+							<button class="btn btn-primary" type="submit">保存资料</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</form>
+		</div>
+	</template>
+	<template id="zhanghao">
+		<div>
+		<div class="media">
+			<div class="media-left">
+				<i class="iconfont icon-suo"></i>
+			</div>
+			<div class="media-body">
+				<div class="row">
+					<div class="col-xs-8 col-sm-9">
+						<h4 class="media-heading">账号密码</h4>
+						<p>用于保护账号信息和登录安全</p>
+					</div>
+					<div class="col-xs-4 col-sm-2 row-float">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">修改</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="media">
+			<div class="media-left">
+				<i class="iconfont icon-youxiangfuben2"></i>
+			</div>
+			<div class="media-body">
+				<div class="row">
+					<div class="col-xs-8 col-sm-9">
+						<h4 class="media-heading">邮箱绑定<span class="media-title">未绑定</span></h4>
+						<p>邮箱绑定可以用于登录账号，重置密码或其他安全验证</p>
+					</div>
+					<div class="col-xs-4 col-sm-2 row-float">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#Modal">修改</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="media">
+			<div class="media-left">
+				<i class="iconfont icon-shouji"></i>
+			</div>
+			<div class="media-body">
+				<div class="row">
+					<div class="col-xs-8 col-sm-9">
+						<h4 class="media-heading">手机绑定<span class="media-title">未绑定</span></h4>
+						<p>手机绑定可以用于登录账号，重置密码或其他安全验证</p>
+					</div>
+					<div class="col-xs-4 col-sm-2 row-float">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#ModalKuang" >修改</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<form action="">
+						<div class="modal-header">
+       						 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        					<h4 class="modal-title" id="myModalLabel">密码修改</h4>
+						</div>
+			            <div class="modal-body">
+			            	<div class="form-group">
+			            		<div class="input-group">
+			            			<span class="input-group-box">
+			            				<i  class="iconfont icon-suo"></i>
+			            			</span>
+			            			<input type="password" class="form-control form-pass" placeholder="原密码">
+
+			            		</div>
+			            		<small class="help-block"></small>
+			            		<small class="help-block-hide"></small>
+			            	</div>
+			            	<div class="form-group">
+			            		<div class="input-group">
+			            			<span class="input-group-box">
+			            				<i  class="iconfont icon-suo"></i>
+			            			</span>
+			            			<input type="password" class="form-control form-pass" placeholder="新密码">
+			            		</div>
+			            		<small class="help-block"></small>
+			            		<small class="help-block-hide"></small>
+			            	</div>
+			            	<div class="form-group">
+			            		<div class="input-group">
+			            			<span class="input-group-box">
+			            				<i  class="iconfont icon-suo"></i>
+			            			</span>
+			            			<input type="password" class="form-control form-pass" placeholder="重复密码">
+
+			            		</div>
+			            		<small class="help-block"></small>
+			            		<small class="help-block-hide"></small>
+			            	</div>
+
+			            </div>
+			            <div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			                <button type="button" class="btn btn-primary">确定</button>
+			            </div>
+					</form>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+		<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<form action="" method="post" onsubmit="return youxiang()">
+						<div class="modal-header">
+       						 <button type="email" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        					<h4 class="modal-title" id="myModalLabel">邮箱绑定</h4>
+						</div>
+			            <div class="modal-body">
+			            	<div class="form-group">
+			            		<div class="input-group">
+			            			<input type="email"  id="email" class="form-control" placeholder="邮箱地址" onblur="emails()">
+			            		</div>
+			            		<small class="help-block"></small>
+			            		<small class="help-block-hide"></small>
+			            	</div>						       
+			            </div>
+			            <div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			                <button type="button" class="btn btn-primary">确定</button>
+			            </div>
+					</form>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+		<div class="modal fade" id="ModalKuang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<form action="" method="post" onsubmit="return shouji()">
+						<div class="modal-header">
+       						 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        					<h4 class="modal-title" id="myModalLabel">手机绑定</h4>
+						</div>
+			            <div class="modal-body">
+			            	<div class="form-group">
+			            		<div class="input-group">
+			            			<input type="text" id="usershouji" class="form-control" placeholder="手机号码" onblur="checkUser()">
+			            		</div>
+			            		<small class="help-block"></small>
+			            		<small class="help-block-hide"></small>
+			            	</div>
+			            	<div class="form-group">
+			            		<div class="input-group">
+			            			<input type="text" class="form-control " id="form-yz-left" placeholder="验证码" >
+			            			<button type="button" id="form-yz-right" class="btn btn-success ">获取验证码</button>
+			            		</div>
+			            		<small class="help-block"></small>
+			            		<small class="help-block-hide"></small>
+			            	</div>
+			            </div>
+			            <div class="modal-footer">
+			                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			                <button type="button" class="btn btn-primary">确定</button>
+			            </div>
+					</form>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+		</div>
+	</template>
+
+	<button class="to-top">
+		<i class="glyphicon glyphicon-arrow-up"></i>
+	</button>
+
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/vue.js"></script>
+	<script src="/js/vue-router.min.js"></script>
+	<script src="/js/vue-resource.min.js"></script>
+	<script src="/js/personal/account.js"></script>
+</body>
+</html>

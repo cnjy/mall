@@ -1,0 +1,30 @@
+.btn-money{
+    padding: 5px 20px;
+}
+.table{
+    color: #76838f;
+}
+.table>thead>tr>th{
+    border-width: 1px;
+}
+.table>tbody>tr>.data-empty{
+    padding: 15px 8px;
+}
+.next{
+    position: relative;
+    text-align: right;
+}
+.next>span{
+    display: inline-block;
+    margin-right: 15px;
+}
+.next>span>a{
+    display: block;
+    padding: 5px 10px;
+    letter-spacing: 3px;
+    border: 1px solid #ccc;
+}
+.next>span>a:hover{
+    background: #eee;
+    color: #333;    
+}

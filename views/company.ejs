@@ -1,0 +1,188 @@
+<%include ./index_header.ejs%>
+<link rel="stylesheet" href="/css/company.css">
+<body>
+	<div class="container container-main">
+		<div class="company-title">
+			<ul class="met-com-nav-ul">
+				<li><div title="公司简介" class="com-link" id="com-active" alt="公司简介" title="公司简介"><router-link to="/jianjie">公司简介</router-link></div></li>
+				<li><div title="线上反馈" class="com-link line-find" alt="线上反馈" title="线上反馈"><router-link to="/xianshang">线上反馈</router-link></div></li>
+				<li><a href="/dcl/join" title="加入我们" class="com-link" alt="加入我们" title="加入我们">加入我们</a></li>
+				<li><a href="/dcl/contact" title="联系我们" class="com-link" alt="联系我们" title="联系我们">联系我们</a></li>
+			</ul>
+		</div>
+		<!-- 公司简介 -->
+		<router-view></router-view>	
+
+		<!-- 线上反馈 -->
+
+	</div>
+	<template id="jianjie">
+		<div>
+			<div class="met-com-box">
+				<div class="met-com-content">
+					<div>
+						<p>
+							<span>某某科技股份有限公司是一家制造移动互联网终端设备的公司</span>
+						</p>
+						<p>
+							<span>某某锤子数码科技有限公司("某某数码")是某某科技股份有限公司的全资子公司，以销售数码产品及提供相关服务为主营业务。</span>
+						</p>
+						<p>
+							<span>某某科技股份有限公司成立于2010年5月，某某数码科技有限公司成立于2012年6月</span>
+						</p>
+						<p>
+							<span>我们的使命是用完美主义的工匠精神，打造用户体验一流的数码消费类产品(智能手机为主)，改善人们的生活质量</span>
+						</p>
+						<div class="met-com-img">
+							<img src="/images/about/1495785128534067.jpg" alt="简介1.jpg" title="点击查看" class="com-img">
+						</div>
+						<div class="com-hide-box">
+							<div class="com-Glyphicons">
+								<span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+								<a class="glyphicon glyphicon-save" aria-hidden="true" target="_blank" download href="http://show.metinfo.cn/muban/res018/323/upload/201705/1495785128534067.jpg"></a>
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</div>
+							<img src="/images/about/1495785128534067.jpg" alt="简介1.jpg" title="1495785128534067.jpg" id="imageFullScreen">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</template>
+	<template id="xianshang">
+		<div>
+			<div class="met-com-line">
+				<form class="form-horizontal" action="/index" method="post" onsubmit="return tijiao()">
+					<div class="form-group">
+						<select class="form-control">
+							<option value>反馈主题</option>
+							<option value="索取资料">索取资料</option>
+							<option value="产品购买">产品购买</option>
+							<option value="商务合作">商务合作</option>
+							<option value="其他反馈">其他反馈</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="姓名" id="username"  onblur="user()">
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="职务" id="usergeneral"  onblur="general()">
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="email" placeholder="Email" id="email" onblur="emails()">
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="联系电话" id="userInput" onblur="checkUser()">
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="单位名称" id="usercompany"  onblur="companyName()">
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<select class="form-control">
+							<option value>省份</option>
+							<option value="北京">北京</option>
+							<option value="贵州">贵州</option>
+							<option value="湖南">湖南</option>
+							<option value="湖北">湖北</option>
+							<option value="河南">河南</option>
+							<option value="山东">山东</option>
+							<option value="安徽">安徽</option>
+							<option value="江苏">江苏</option>
+							<option value="上海">上海</option>
+							<option value="浙江">浙江</option>
+							<option value="江西">江西</option>
+							<option value="福建">福建</option>
+							<option value="广东">广东</option>
+							<option value="广西">广西</option>
+							<option value="海南">海南</option>
+							<option value="云南">云南</option>
+							<option value="重庆">重庆</option>
+							<option value="四川">四川</option>
+							<option value="西藏">西藏</option>
+							<option value="新疆">新疆</option>
+							<option value="宁夏">宁夏</option>
+							<option value="青海">青海</option>
+							<option value="甘肃">甘肃</option>
+							<option value="陕西">陕西</option>
+							<option value="山西">山西</option>
+							<option value="吉林">吉林</option>
+							<option value="辽宁">辽宁</option>
+							<option value="黑龙江">黑龙江</option>
+							<option value="内蒙古">内蒙古</option>
+							<option value="河北">河北</option>
+							<option value="天津">天津</option>
+							<option value="港澳台">港澳台</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="详细地址" id="useraddress"  onblur="address()">
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" rows="5" placeholder="信息描述" id="usermessage"  onblur="message()"></textarea>
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label" id="find-label">您是怎么找到我们的</label>
+						<div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+								</label>
+								<label for="">搜索引擎</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+								</label>
+								<label for="">网站链接</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+								</label>
+								<label for="">朋友介绍</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+								</label>
+								<label for="">电视广告</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+								</label>
+								<label for="">其他方式</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group yanzheng1">
+						<input class="form-control" type="text" placeholder="验证码" data-fv-message="不能为空" id="yanzheng1" onkeyup="yanzhengs()">
+						<div class="yanzhengma1 fr">
+							<img style="display:block" class="qq">
+						</div>
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+
+						<button type="submit" class="btn btn-primary btn-lg btn-block">提交</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</template>
+	<script src="/js/company.js"></script>
+
+	<!--页面底部-->
+	<%include ./index_footer.ejs%>
+
+</body>
+</html>

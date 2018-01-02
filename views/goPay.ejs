@@ -1,0 +1,217 @@
+<%include ./index_header.ejs%>
+<link rel="stylesheet" href="/css/goPay.css">
+    <div class="goPay-main" style="margin-top: 60px;">
+        <div class="container">
+            <div class="panel">
+                <div class="panel-body">
+
+                    <div class="acceptAdress">
+                        <div class="acceptAdress-head">
+                            <label>收货地址</label>
+                            <button type="button" class="btn  addbtn" data-toggle="modal"
+                                    data-target=".bs-example-modal-sm">添加收货地址</button>
+                                   <!-- modal -->
+                            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+                                 aria-labelledby="mySmallModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close"><span aria-hidden="true">&times;
+                                                </span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">收货地址</h4>
+                                        </div>
+                                        <form action="" method="post" onsubmit="return addform()">
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control username1" placeholder="收货人姓名">
+                                                    <div class="none">此项不能为空</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control number1" placeholder="收货人电话" >
+                                                    <div class="none">此项不能为空</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+                                                        <option value="0">请选择所在地区</option>
+                                                        <option value="北京市">北京市</option>
+                                                        <option value="天津市">天津市</option>
+                                                        <option value="河北省">河北省</option>
+                                                        <option value="山西省">山西省</option>
+                                                        <option value="内蒙古自治区">内蒙古自治区</option>
+                                                        <option value="辽宁省">辽宁省</option>
+                                                        <option value="吉林省">吉林省</option>
+                                                        <option value="黑龙江省">黑龙江省</option>
+                                                        <option value="上海市">上海市</option>
+                                                        <option value="江苏省">江苏省</option>
+                                                        <option value="浙江省">浙江省</option>
+                                                        <option value="安徽省">安徽省</option>
+                                                        <option value="福建省">福建省</option>
+                                                        <option value="江西省">江西省</option>
+
+                                                    </select>
+                                                    <div class="none">此项不能为空</div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea class="form-control text1" rows="3"
+                                                              placeholder="详细地址"></textarea>
+                                                    <div class="none">此项不能为空</div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary fl
+                                                    addsave" >保存</button>
+
+                                                    <button type="button" class="btn btn-default fl"
+                                                            data-dismiss="modal">取消</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="acceptAdress-list">
+                            <!-- 地址遍历 acceptAdress-list-one -->
+                            <%for(let item of userSite){%>
+                            <div class="acceptAdress-list-one col-lg-4 col-xs-6">
+                                <div class="acceptAdress-list-one-box">
+                                    <h4 class="acceptAdress-list-one-name"><%= item.name%></h4>
+                                    <i class="btn iconfont icon-bianji adress-editor" data-toggle="modal"
+                                       data-target=".bs-example-modal-sm-2" data-id='<%= item.id%>'></i>
+                                    <p class="acceptAdress-list-one-call"><%= item.phone%></p>
+                                    <p class="acceptAdress-list-one-adress">
+                                        <span class="province"><%= item.site%></span>
+                                        <span class="urban"><%= item.text%></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <%}%>
+
+                            <!-- modal -->
+                            <div class="modal fade bs-example-modal-sm-2" tabindex="-1"
+                                 role="dialog" aria-labelledby="mySmallModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="">收货地址</h4>
+                                        </div>
+                                        <form action="">
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control site-username"
+                                                           placeholder="收货人姓名">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control site-number"
+                                                           placeholder="收货人电话">
+                                                </div>
+                                                <div class="form-group ">
+                                                    <select class="form-control sheng">
+                                                        <option value="北京市">北京市</option>
+                                                        <option value="天津市">天津市</option>
+                                                        <option value="河北省">河北省</option>
+                                                        <option value="山西省">山西省</option>
+                                                        <option value="山东省">山东省</option>
+                                                        <option value="内蒙古自治区">内蒙古自治区</option>
+                                                        <option value="辽宁省">辽宁省</option>
+                                                        <option value="吉林省">吉林省</option>
+                                                        <option value="黑龙江省">黑龙江省</option>
+                                                        <option value="上海市">上海市</option>
+                                                        <option value="江苏省">江苏省</option>
+                                                        <option value="浙江省">浙江省</option>
+                                                        <option value="安徽省">安徽省</option>
+                                                        <option value="福建省">福建省</option>
+                                                        <option value="江西省">江西省</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                            <textarea class="form-control form-txt" rows="3"
+                                                                      placeholder="详细地址"></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-primary fl change-save">保存</button>
+                                                    <button type="button" class="btn btn-default fl"
+                                                            data-dismiss="modal">取消</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+
+                    <div class="goPayWay">
+                        <label>支付方式</label>
+                        <span>在线支付</span>
+                    </div>
+                    <hr>
+
+                    <div class="songWay">
+                        <label>配送方式</label>
+                        <span>快递配送(免运费)</span>
+                    </div>
+                    <hr>
+
+                    <div class="goPayShop">
+                        <label>商品</label>
+                        <ul>
+                            <!-- 遍历每一条 pay-goods-body-->
+                            <%for(let item of shopCart){%>
+                            <li class="pay-goods-body">
+                                <div class="col-xs-6">
+                                    <a href="#" onclick="toCart(<%= item.id%>)">
+                                        <img src="<%= item.img%>" alt="" width="100" height="100">
+                                    </a>
+                                    <a href="#" onclick="toCart(<%= item.id%>)">
+                                        <span class="pay-good-name"><%= item.title%></span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 text-right middle">
+                                    <%= item.price%>.00元<span>&nbsp; x &nbsp;
+                                        <i style="color: orangered;">
+                                            <%= item.value%>
+                                        </i>
+                                    </span>
+                                </div>
+                                <div class="col-xs-3 text-right middle">
+                                    <span class="zongjia"><%= item.price * item.value%>.00元</span>
+                                </div>
+                            </li>
+                            <%}%>
+                        </ul>
+                    </div>
+
+                    <div class="form-group textarea">
+                        <textarea class="form-control" placeholder="给商家留言,选填" rows="3" ></textarea>
+                    </div>
+                    <hr>
+
+                    <div class="pay-submit col-md-12">
+                        <div class="col-lg-8 col-md-6 text-right">
+                            共 <span class="pay-submit-num"> <%= value%> </span> 件 商 品 , 合 计:
+                            <span class="pay-submit-price"><%= total%>.00元</span>
+                        </div>
+                        <div class="col-lg-4 col-md-6 text-right">
+                            <a href="/addShopCart" class="pay-submit-back">返回购物车</a>
+                            <input type="submit" class="pay-submit-tijiao" value="提交订单"></input>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/js/goPay.js"></script>
+<%include ./index_footer.ejs%>
+

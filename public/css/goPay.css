@@ -1,0 +1,231 @@
+/*----------------全局样式-----------------*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+ul li{list-style: none; } 
+a{text-decoration: none; color:black;}
+a:hover{text-decoration: none;}
+a img{border:none;}
+body{margin: 0 auto; font-family: "Microsoft YaHei";background-color:#ededed;}
+.fl{float: left; }
+.fr{float: right; }
+
+
+/*---------------------*/
+.goPay-main label{
+    font-size: 18px;
+    color: #37474f;
+    font-weight: normal;
+    text-shadow: none;
+}
+.panel-body{
+    padding: 30px;
+}
+.acceptAdress-list{
+    overflow: hidden;
+    margin-top: 20px;
+}
+.acceptAdress-head >button{
+    margin-left: 80px;
+    background: white;
+    border:1px solid #46be8a;
+    color:#46be8a;
+    padding: 5px 10px;
+    transition:all .5s;
+}
+.acceptAdress-head >button:hover{
+    color:white;
+    background: #46be8a;
+}
+
+.acceptAdress-list-one{
+    padding: 10px;
+
+}
+.acceptAdress-list-one>div:hover{
+    border:1px solid #f96868;
+}
+
+.acceptAdress-list-one>div{
+    border:1px solid #E4EAEC;    
+    position: relative;
+    padding: 10px 15px 20px;
+    cursor: pointer;
+}
+
+.acceptAdress-list-one>div>p{
+    color: #76838f;
+}
+/*编辑的图标*/
+.adress-editor{
+    position:absolute;
+    top:5px;
+    right:5px;
+    color:#76838F;
+    font-weight:600;
+    display: none;
+    cursor:pointer;
+}
+
+
+/*支付方式*/
+.goPayWay{
+    padding: 20px;
+}
+.goPayWay span{
+    margin-left: 80px;
+    border:1px solid #f96868;
+    color:#f96868;
+    padding: 10px 25px;
+}
+
+.songWay{
+    padding:20px;
+}
+.songWay span{
+    margin-left: 80px;
+    color:#f96868;
+}
+
+.goPayShop>ul{
+    overflow: hidden;
+    background: #f3f7f9;
+    margin-top: 20px;
+}
+.goPayShop>ul>li{   
+    padding: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #E4EAEC;
+}
+
+.pay-good-name{
+    color:#4E97D9 ;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.pay-goods-body .zongjia{
+    font-size: 18px;
+    color:#f96868!important;
+}
+.pay-submit-num{
+    font-size:20px;
+}
+
+textarea{
+    width:100%;
+}
+.textarea{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.middle{
+    line-height: 100px;
+}
+
+.pay-submit span{
+    color:#f96868;
+}
+.pay-submit-price{
+    font-size:28px;
+}
+.pay-submit-back,.pay-submit-tijiao{
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.pay-submit-back{
+   background: #e4eaec;
+   border:1px solid #e4eaec;
+   margin-right: 10px;
+   transition: all 1s;
+}
+.pay-submit-back:hover{
+    background:#f3f7f9; 
+   border:1px solid #f3f7f9;
+
+}
+.pay-submit-tijiao{
+    color:white;
+    background:#f96868; 
+     border:none;
+   transition: all 1s;
+
+}
+.pay-submit-tijiao:hover{
+    background: #fa7a7a;
+}
+
+
+
+.none{
+    display: none;
+    color:red;
+    font-size: 12px;
+}
+
+.is{
+    border: 1px solid #f96868 !important;
+}
+
+
+
+/*modal*/
+
+.modal-header{
+    background: #62a8ea;
+    color:white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.modal-header button span{
+    color: white;
+}
+.modal-footer{
+    border-top:none;
+}
+
+
+
+
+@media(max-width:578px){
+    .acceptAdress-list-one{
+        width: 100%;
+    }
+    .goPay-main .container{
+        padding: 0;
+    }
+    .goPay-main .panel-body{
+        padding: 0;
+        padding-top: 20px;
+    }
+    .acceptAdress-head{
+        padding-left: 10px;
+    }
+    .acceptAdress-head button{
+        margin-left:20px;
+    }
+    .goPayWay span{
+        margin-left: 40px;
+    }
+    .songWay span{
+        margin-left: 40px;
+    }
+    .goPayShop label{
+        padding-left: 20px;
+    }
+    .pay-good-name{
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+    .goPayShop>ul>li{
+        padding: 10px;
+    }
+    .pay-goods-body .col-sm-6, .pay-goods-body .col-xs-8{
+        padding-left: 0;
+    }
+}
+@media(max-width: 400px){
+    .middle{
+        line-height: 20px;
+    }
+}

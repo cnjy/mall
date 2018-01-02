@@ -1,0 +1,77 @@
+/*----------------全局样式-----------------*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+ul li{list-style: none; } 
+a{text-decoration: none; color:black;}
+a:hover{text-decoration: none;}
+a img{border:none;}
+body{margin: 0 auto; font-family: "Microsoft YaHei";overflow-x: hidden;  background-color:#ededed;}
+.fl{float: left; }
+.fr{float: right; }
+html{
+    background-color:#ededed;
+}
+
+
+.travel-box{
+    background:#ededed; 
+}
+.travel-article{
+    padding:50px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+}
+.travel-title{
+    font-weight: 400;
+    color:#37474f;
+    font-size:25px;
+    margin-bottom: 20px;
+}
+.travel-article p{
+    line-height: 30px;
+}
+.travle-one {
+    border-bottom: 1px solid  #ededed;
+    margin-bottom: 30px;
+}
+.travle-one img{
+    margin:10px 0;
+    /*width:100%;*/
+}
+.travle-one-title{
+    font-weight: 500;
+    color:#222;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+@media(max-width: 900px){
+    .travle-one img{
+
+        width:100%;
+    }
+}
+
+
+
+
+
+/*-------------最新活动-------------*/
+.newActive-main{
+    background: #ededed;
+}
+.newActive-box{
+    padding:30px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background: white;
+}
+.newActive-main p{
+    margin:0 0 11px;
+    font-size: 12px;
+    color: #222;
+    line-height: 1.8;
+}

@@ -1,0 +1,77 @@
+<% include ./personal_header %>
+<body>
+    <div class="personal">
+        <div class="container">
+            <div class="page-content">
+                <div class="col-md-12 menu-list menu">
+                    <button class="btn btn-primary btn-block dropdown-toggle">我的订单
+                        <i class="glyphicon glyphicon-triangle-bottom"></i>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <% include ./personal_content %>
+                </div>
+                <div class="col-md-9 shop-profile">
+                    <div class="card-content">
+                        <div class="panel-body shop-order">
+                            <div>
+                                <ul class="nav-tab">
+                                    <li>
+                                        <router-link to="/order">已领取</router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/pay">待领取</router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/take">已使用</router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/close">已过期</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+                            <router-view></router-view>
+                        </div>
+                        <template id="order">
+                            <div>
+                                <div class="shop-order-list">
+                                    <div class="order-list-box order-title" style="border: none;">
+                                        <div class="title-box">没有符合条件的优惠券</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template id="pay">
+                            <div>
+                                <div class="shop-order-list">
+                                    <div class="order-list-box order-title" style="border: none;">
+                                        <div class="title-box">没有符合条件的优惠券</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template id="take">
+                            <div>
+                                <div class="shop-order-list">
+                                    <div class="order-list-box order-title" style="border: none;">
+                                        <div class="title-box">没有符合条件的优惠券</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template id="close">
+                            <div>
+                                <div class="shop-order-list">
+                                    <div class="order-list-box order-title" style="border: none;">
+                                        <div class="title-box">没有符合条件的优惠券</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/personal/order_vue.js"></script>
+<%include ./footer2.ejs%>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/boot/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/font/download/tubiao/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="/font/download/ksyfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="/font/download/myFont/iconfont.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title><%= title%></title>
+    <!--[if gt IE 8]> <!-->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <!--<![endif]-->
+
+    <!--[if lte IE 8]>
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <![endif]-->
+    <script src="/js/header.js"></script>
+    <script src="/js/vue.js"></script>
+    <script src="/js/vue-router.min.js"></script>
+    <script src="/js/vue-resource.min.js"></script>
+    <!--让IE8 支持HTML5新标签 和 Media-->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <header>
+        <!--头部-->
+        <nav>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                         <!-- 小屏幕三道杠 -->
+                        <i class="iconfont icon-sangangy"></i>
+                        <div class="nav-logo">
+                            <a href="/"><img src="/images/index/logo.png" alt="logo" title="电子数码"></a>
+                        </div>
+                        <div class="navbar-right vertical-align nav-account">
+                            <span>|</span>
+                            <a href="#" class="glyphicon glyphicon-user" onclick="judge()"></a>
+                        </div>
+                        <div class="met-nav-ul">
+                            <ul class="navbar-right nav navbar-nav nav-ul">
+                                <li>
+                                    <a href="/" class="select">首页</a>
+                                </li>
+                                <li class="show-list">
+                                    <a href="#">关于公司</a>
+                                    <div class="nav-list">
+                                        <ul>
+                                            <li>
+                                                <a href="/dcl/company/">公司简介</a>
+                                            </li>
+                                            <li>
+                                                <a href="/dcl/company#/xianshang">线上反馈</a>
+                                            </li>
+                                            <li>
+                                                <a href="/dcl/join">加入我们</a>
+                                            </li>
+                                            <li>
+                                                <a href="/dcl/contact">联系我们</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="show-list">
+                                    <a href="#">电子产品</a>
+                                    <div class="nav-list">
+                                        <ul>
+                                            <li>
+                                                <a href="/shopElectronics#/phoneHot">热门手机</a>
+                                            </li>
+                                            <li>
+                                                <a href="/shopElectronics#/monitor">耳机音响</a>
+                                            </li>
+                                            <li>
+                                                <a href="/shopElectronics#/phoneParts">手机配件</a>
+                                            </li>
+                                            <li>
+                                                <a href="/shopElectronics#/products">周边产品</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="show-list">
+                                    <a href="#">新闻中心</a>
+                                    <div class="nav-list">
+                                        <ul>
+                                            <li>
+                                                <a href="/ksy/new_center#/news">新闻动态</a>
+                                            </li>
+                                            <li>
+                                                <a href="/ksy/new_center#/guan">官网新闻</a>
+                                            </li>
+                                            <li>
+                                                <a href="/ksy/new_center#/zixun">最新资讯</a>
+                                            </li>
+                                            <li>
+                                                <a href="/ksy/new_center#/imgshow">图片展示</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/dcl/join">加入我们</a>
+                                </li>
+                                <li>
+                                    <a href="/dcl/contact">联系我们</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--导航头部-->
+        <div class="met-nav-sec  fix-show">
+            <div class="container">
+                <div class="row">
+                    <div class="collapse navbar-collapse navbar-collapse-toolbar">
+                        <ul class="met-sec-ul">
+                            <li><a href="/" class="met-sel-li">首页</a></li>
+                            <li class="met-show-list">
+                                <a href="/dcl/company/">关于公司</a>
+                                <div class="nav-list met-list">
+                                    <ul>
+                                        <li>
+                                            <a href="/dcl/company/">公司简介</a>
+                                        </li>
+                                        <li>
+                                            <a href="/dcl/company#/xianshang">线上反馈</a>
+                                        </li>
+                                        <li>
+                                            <a href="/dcl/join">加入我们</a>
+                                        </li>
+                                        <li>
+                                            <a href="/dcl/contact">联系我们</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="met-show-list">
+                                <a href="/shopElectronics">电子产品</a>
+                                <div class="nav-list met-list">
+                                    <ul>
+                                        <li>
+                                            <a href="/shopElectronics#/phoneHot">热门手机</a>
+                                        </li>
+                                        <li>
+                                            <a href="/shopElectronics#/monitor">耳机音响</a>
+                                        </li>
+                                        <li>
+                                            <a href="/shopElectronics#/phoneParts">手机配件</a>
+                                        </li>
+                                        <li>
+                                            <a href="/shopElectronics#/products">周边产品</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="met-show-list">
+                                <a href="/ksy/new_center">新闻中心</a>
+                                <div class="nav-list met-list">
+                                    <ul>
+                                        <li>
+                                            <a href="/ksy/new_center#/news">新闻动态</a>
+                                        </li>
+                                        <li>
+                                            <a href="/ksy/new_center#/guan">官网新闻</a>
+                                        </li>
+                                        <li>
+                                            <a href="/ksy/new_center#/zixun">最新资讯</a>
+                                        </li>
+                                        <li>
+                                            <a href="/ksy/new_center#/imgshow">图片展示</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/dcl/join">加入我们</a>
+                            </li>
+                            <li>
+                                <a href="/dcl/contact">联系我们</a>
+                            </li>
+                        </ul>
+                        <div class="navbar-right vertical-align nav-account">
+                            <a href="#" class="glyphicon glyphicon-user fix-a" onclick="judge()"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        function judge(){
+            let isNo = sessionStorage.getItem('isNo');
+            let toLogin = sessionStorage.getItem('toLogin');
+            if(toLogin){
+                sessionStorage.setItem('toLogin', false);
+            }
+            if(isNo == 0){
+                window.location.href = '/personal';
+            }else{
+                window.location.href = '/login';
+            }
+        }
+        $(".icon-sangangy").click(function(){
+            $(".met-nav-ul").slideToggle();
+        })
+    </script>

@@ -1,0 +1,48 @@
+<% include ./personal_header %>
+<body>
+    <div class="personal">
+        <div class="container">
+            <div class="page-content">
+                <div class="col-md-12 menu-list menu">
+                    <button class="btn btn-primary btn-block dropdown-toggle">我的订单
+                        <i class="glyphicon glyphicon-triangle-bottom"></i>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <% include ./personal_content %>
+                </div>
+                <div class="col-md-9 shop-profile">
+                    <div class="card-content">
+                        <div class="panel-body shop-collect">
+                            <div>
+                                <ul class="nav-tab">
+                                    <li><a href="" class="sel-to">已收藏</a></li>
+                                </ul>
+                            </div>
+                            <div class="shop-collect-list">
+                                <div class="collect-single" :data_id=item.id v-for='(item,index) of shopList'>
+                                    <div class="collect-img">
+                                        <a href="">
+                                            <img :src=item.img alt="">
+                                        </a>
+                                        <div class="overlay-panel">
+                                            <a href="#" class="btn btn-xs btn-danger vertical-align-middle" @click='toShopCart(item.id)'>购买</a>
+                                            <a href="#" class="btn btn-xs btn-default favorite-remove" @click='reShop(index,item.id)'>删除</a>
+                                        </div>
+                                    </div>
+                                    <div class="collect-tit">
+                                        <h4>
+                                            <a href="#" @click='toShopCart(item.id)'>{{item.title}}</a>
+                                        </h4>
+                                        <p>{{item.price}}.00元</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./js/personal/collect_vue.js'></script>
+<%include ./footer2.ejs%>

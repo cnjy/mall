@@ -1,0 +1,128 @@
+<%include ./index_header.ejs%>
+<!-- 主体部分 -->
+<link rel="stylesheet" href="/css/new.css">
+<div class="box">
+    <!-- 头部导航 -->
+    <div class="new-header">
+        <div class="container">
+            <ul class="newUl">
+                <li><router-link to="/home">全部</router-link></li>
+                <li><router-link to="/news">新闻动态</router-link></li>
+                <li><router-link to="/guan">官网新闻</router-link></li>
+                <li><router-link to="/zixun">最新资讯</router-link></li>
+                <li><router-link to="/imgshow">图片展示</router-link></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主体部分new-main -->
+    <div class="new-main">
+        <div class="container ">
+            <div id="row">
+                <!-- 左边 -->
+                <!-- 全部 -->
+                <router-view></router-view>
+
+                <!-- 文章详情 开始时隐藏 点击时显示-->
+                <div class="xiangqing" style="display: none">
+                    <div class="col-sm-9 main-left">
+                        <div class="xq-title">
+                            <span class="xiangqingtitle"></span>
+                            <div class="xq-author-date">
+                                <span class="date">2017-05-26 11:32:27 </span>
+                                <span class="author">由 admin 发表</span>
+                                <span class="eye"><i class="glyphicon glyphicon-eye-open"></i> 954</span>     
+                            </div> 
+                        </div>
+                        <div class="xq-content">
+                            <p class="detail-p01">
+                                
+                            </p>
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                          
+                        </div>
+                        <div class="xq-foot">
+                            <span class="pre fl xq-foot-same">上一篇</span>
+                            <span class="next fr xq-foot-same">下一篇</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右边 -->
+                <div class="col-sm-3 main-right">
+                    <div class="img">
+                        <img src="/images/all/1495684264.jpg" id="1" alt="">
+                        <img src="/images/all/1495769580(1).png" id="2" alt="">
+                        <img src="/images/all/1495683831.png" id="3" alt="">
+                        <img src="/images/all/1495764240.jpg" id="4" alt="">
+                        <img src="/images/all/1495769743.jpg" id="5" alt="">
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+
+<!-- 轮播图部分 -->
+<div class="max">
+    
+    
+</div>
+
+<template id="all">
+    <div class='all-content'>
+        <div class="col-sm-9 main-left list" id="main-left">
+            <div class="news-title">
+                <form class="form">
+                    <span>{{head}}</span>
+                    <div id="form-control">
+                        <input type="text" class="form-control"  placeholder="输入搜索更多">
+                        <i class="glyphicon glyphicon-search" id="search"></i>
+                    </div>
+                </form>
+            </div>
+
+            <div class="article">
+                <div class="article-detail"  v-for="(item, index) in article">
+                    <div class="article-head">
+                        <span class="fl article-head-title">{{item.title}}</span>
+                        <span class="id" style="display: none">{{item.id}}</span>
+                        <div class="fr article-head-right">
+                            <span class="date">2017-05-26</span>
+                            <span class="author">由admin发表</span>
+                        </div>
+                    </div>
+
+                    <img :src="item.img" alt="" >
+                    <div class="content">
+                        <span>{{item.content}}</span>
+                        <span class="read"><a href="javascript:void(0);"> 阅读全文 ></a></span>
+                    </div>
+                </div>
+
+                <!-- 分页 123-->
+                <nav aria-label="Page navigation" class="page" v-show="isPage">
+                    <ul class="pagination">
+                        <li class="active">
+                            <router-link to="/page1">1</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/page2">2</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/page3">3</router-link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<script src="/js/newjs.js"></script>
+<script src='/js/new.js'></script>
+<%include ./index_footer.ejs%>

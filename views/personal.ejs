@@ -1,0 +1,127 @@
+<% include ./personal_header %>
+    <div class="personal">
+        <div class="container">
+            <div class="page-content">
+                <div class="col-md-3 hide-box">
+                    <% include ./personal_content %>
+                </div>
+                <div class="col-md-9 shop-profile">
+                    <div class="card-content">
+                        <div class="card-header" v-for='item of userMessage'>
+                            <a href="">
+                                <img src="./images/all/user.jpg" alt="" title="kyl">
+                            </a>
+                            <div class="user">{{item.name}}</div>
+                            <div class="user-grade">{{item.grade}}</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row text-xs-center">
+                                <div class="col-xs-4 col-sm-3 col-md-4 col-xs-offset-2 col-sm-offset-1">
+                                    <div class="counter">
+                                        <span class="counter-number">
+                                            <a href="/order#/pay">{{shopAll.length}}</a>
+                                        </span>
+                                        <div class="counter-label">
+                                            待支付
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-2">
+                                    <div class="counter">
+                                        <span class="counter-number">
+                                            <a href="/order#/take">0</a>
+                                        </span>
+                                        <div class="counter-label">
+                                            待收货
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <div class="counter">
+                                        <span class="counter-number">
+                                            <a href="/consume">100000001.00元</a>
+                                        </span>
+                                        <div class="counter-label">
+                                            账户余额
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body-list">
+                            <ul class="card-group">
+                                <li>
+                                    <a href="/order">
+                                        <span>
+                                            <i class="glyphicon glyphicon-list-alt"></i>
+                                            查看所有订单
+                                        </span>
+                                        <span class="to">
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/collect">
+                                        <span>
+                                            <i class="glyphicon glyphicon-heart"></i>
+                                            我的收藏
+                                        </span>
+                                        <span class="to">
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/coupon">
+                                        <span>
+                                            <i class="glyphicon glyphicon-bookmark"></i>
+                                            我的优惠劵
+                                        </span>
+                                        <span class="to">
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/site" @click="toSite()">
+                                        <span>
+                                            <i class="glyphicon glyphicon-map-marker"></i>
+                                            收费地址
+                                        </span>
+                                        <span class="to">
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/consume">
+                                        <span>
+                                            <i class="glyphicon glyphicon-credit-card"></i>
+                                            消费明细
+                                        </span>
+                                        <span class="to">
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dcl/account#/geren">
+                                        <span>
+                                            <i class="glyphicon glyphicon-edit"></i>
+                                            修改个人信息
+                                        </span>
+                                        <span class="to">
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./js/personal/personal_vue.js'></script>
+<%include ./footer2.ejs%>

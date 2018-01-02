@@ -1,0 +1,237 @@
+/*----------------全局样式-----------------*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+ul,li{list-style: none; } 
+a{text-decoration: none; color:black;}
+a:hover{text-decoration: none;}
+a img{border:none;}
+body{margin: 0 auto; font-family: "Microsoft YaHei";overflow-x: hidden;  background-color:#ededed;}
+.fl{float: left; }
+.fr{float: right; }
+html{
+     background-color:#ededed;
+}
+
+.panel .panel-body{
+    min-height: 130px !important;
+}
+/*-------------*/
+.orange{
+    color:#f2a654;
+    font-size:36px;
+}
+.waitBuy{
+    vertical-align: super;
+    margin-left:10px;
+}
+.waitpay h3{
+    margin-left: 10px;
+    text-shadow: rgba(0,0,0,.15) 0 0 1px;
+}
+.waitpay .order-btn{
+    text-align: right;
+}
+
+@media(max-width:768px){
+    html{
+        min-width:320px;
+    }
+    .waitpay .order-btn{
+        text-align: left;
+    }
+    #order-date{
+        display: none;
+    }
+    .procedure .col-xs-3{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .order-xq .col-xs-4{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+#table-two>td>a>img{
+    width: 80px;
+    margin-right:10px;
+}
+#table-two .td-left{
+    text-align: left;
+}
+
+
+.order-btn{
+    margin-top: 3%;
+}
+.order-btn a{
+    padding:10px 15px;
+}
+.order-btn a:hover{
+    text-decoration: none;
+}
+.orderCancel{
+    color: #76838f;
+    border:1px solid #e4eaec;
+}
+.orderCancel:hover{
+    color:#76838f;
+}
+.nowPay{
+    background: #fa7a7a;
+    color:white;
+    margin:0 10px;
+}
+.nowPay:hover{
+    color:white;
+}
+
+
+/*----------下单进程-----------*/
+.xiadan{
+    font-size: 16px;
+}
+.xiadan i{
+    color:#62a8ea;
+    border-radius:50%;
+    border:2.5px solid #62a8ea;
+    padding:8px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.xiadan span{
+    display: block;
+}
+.xiadan .name{
+    margin:10px 0;
+    color:#526069;
+}
+.grey i{
+    background: #ccd5db;
+    padding:8px;
+    font-size: 25px;
+    font-weight: 400;
+    border-radius:50%;
+    color:white;
+    border:none;
+}
+.xiaDan{
+    position: relative;
+}
+.xiaDan:after{
+    content: "";
+    width: 54%;
+    height: 4px;
+    background: #62a8ea;
+    position: absolute;
+    top:50%;
+}
+.fukuan{
+    position: relative;
+}
+.fukuan:before{
+    content: "";
+    width: 50%;
+    height: 4px;
+    background:#ccd5db;
+    position: absolute;
+    top:50%;
+    left:0;
+}
+.fukuan:after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background:#ccd5db;
+    position: absolute;
+    top:50%;
+}
+.fahuo{
+    position: relative;
+}
+.fahuo:after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background:#ccd5db;
+    position: absolute;
+    top:50%;
+}
+
+/*-------------*/
+.goodsName{
+    padding:15px;
+    color:#526069;
+}
+.table>tbody>tr>th{
+    border:none;
+    font-weight: 500;
+}
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
+#table-two{
+    background:  rgba(243,247,249,.3);
+}
+#table-two span a{
+    color:#62a8ea;
+}
+
+
+/*-------------*/
+.panel-body{
+    padding:30px;
+}
+.order-xq .row div{
+   margin:5px 0;
+}
+.order-xq .row div:nth-child(1){
+    color:#777;
+}
+.order-xq .row div:nth-child(2){
+    color: #2a333c;
+}
+
+
+/*---------*/
+.order-price table{
+    color:#76838f;
+}
+.order-price table tr th,.order-price table tr td,.order-price table tr td span{
+    text-align: center;
+}
+.order-price table tr td span{
+    background: #e4eaec;
+    color:#76838f;
+    padding:2px 6px;
+    border-radius: 3px;
+}
+@media screen and (max-width: 600px) {
+    .panel-body{
+        padding: 50px 0;
+    }
+}
+@media screen and (max-width: 536px) {
+    #table-two>td>a>img{
+        margin-right: 0;
+    }
+    #table-one{
+        display: none;
+    }
+    .text-center{
+        display: none;
+    }
+    .panel-body{
+        padding: 50px 0;
+    }
+    .table>tbody>tr>th{
+        padding:8px 0;
+    }
+    .table>tbody>tr>td{
+        padding:8px 0;
+    }
+    .shop-profile,.container,.col-md-3{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

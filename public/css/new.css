@@ -1,0 +1,269 @@
+/*----------------全局样式-----------------*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+ul li{list-style: none; } 
+a{text-decoration: none; color:black;}
+a:hover{text-decoration: none;}
+a img{border:none;}
+body{margin: 0 auto; font-family: "Microsoft YaHei";overflow-x: hidden;  background-color:#ededed;}
+.fl{float: left; }
+.fr{float: right; }
+html{
+    background-color:#ededed;
+}
+
+/*头部导航*/
+.new-header{
+    background-color:#ededed;
+}
+.new-header ul li{
+    float:left;
+    padding: 20px 40px 20px 0px;
+}
+.new-header ul li a{
+    color:#999;
+    font-size: 12px;
+}
+.new-header ul li a:hover{
+    color:#5079d9;
+    text-decoration: none;
+}
+/*-----y*/
+.new-header ul li a:focus{
+    text-decoration: none;
+}
+#row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.new-main{
+    background-color:#ededed;
+    
+}
+
+
+
+
+
+/*主体部分左边*/
+.new-main{
+    padding-top:10px;
+}
+.main-left{
+    margin-bottom: 20px;
+}
+#main-left{
+     padding-left:0;
+}
+.news-title{
+    border:1px solid #ccc;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(#fbfbfb, #ececec);
+    padding:2px;
+    border-bottom:1px solid #d4d4d4;
+    position: relative;
+}
+.news-title span{
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 12px;
+}
+.form{
+    padding: 13px;
+}
+
+#form-control{
+    position: absolute;
+    top:10px;
+    right: 15px;
+}
+
+#search{
+    position: absolute;
+    top:10px;
+    right:10px;
+    color: #666;
+}
+
+.main-left .article{
+    border:1px solid #ccc;
+    border-top:none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding:30px;
+    overflow: hidden;
+    background: #fff;
+}
+.main-left .article-head-title{
+    font-size:22px;
+    font-weight: 400;
+    color:rgb(102, 102, 102);
+    text-transform: capitalize;
+}
+.main-left .article-head-title,.article-head-right{
+    display: inline-block;
+    overflow: hidden;
+}
+.article-detail{
+    margin-bottom: 30px;
+}
+.article-head {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.article-head a:hover{
+    text-decoration: none;
+    color:rgb(80, 121, 217);
+}
+.article-head-right{
+    font-size:12px;
+    color:#888;
+    vertical-align: bottom;
+    line-height: 30px;
+}
+/*文章右边图片*/
+.article img{
+    width:100%;
+    margin-bottom: 15px;
+}
+.article .read{
+    margin-left:10px;
+}
+.article .read a:hover{
+    text-decoration: none; 
+} 
+.article .content{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.page{
+    text-align: center;
+}
+.page .pagination{
+    margin:0;
+}
+
+
+
+
+/*文章详情*/
+.xiangqing .main-left{
+    padding: 30px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+}
+.xiangqing .main-left p{
+    line-height: 30px;
+}
+.xq-title{
+    border-bottom:1px solid #eee;
+    padding-bottom: 20px;
+}
+.xq-title .fr{
+    line-height: 30px;
+}
+.xq-title .xiangqingtitle{
+    font-size:22px;
+    color:#37474f;
+}
+.xq-title .author{
+    font-size: 12px;
+    color:#888;
+    line-height: 25px;
+        padding:0 10px;
+}
+.xq-title .eye{
+    font-size: 12px;
+    color:#888;
+    line-height: 25px;
+}
+.xq-title .date{
+    font-size: 12px;
+    color:#888;
+    line-height: 25px;
+}
+.xq-author-date{
+    float:right;
+}
+.xq-content{
+    margin-top: 30px;
+}
+.xq-content img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.xq-foot{
+    overflow: hidden;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top:1px solid #eee;
+}
+.xq-foot .xq-foot-same{
+    background:linear-gradient(#fcfcfc, #f5f5f5);
+    border-radius: 5px;
+    padding:5px 15px;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .3s ease;
+}
+.xq-foot .xq-foot-same:hover{
+    color: #62a8ea;
+}
+.select-to-link{
+    color: #5079d9 !important;
+}
+
+
+
+/*轮播图部分*/
+/*.max{
+    height: 100px;
+    width:100%;
+    background: pink;
+    position:fixed;
+    top:0;
+}
+*/
+
+
+/*主体部分右边*/
+.main-right .img img{
+    width:100%;
+    border-radius: 5px;
+    margin-bottom: 35px;
+    cursor: pointer;
+
+}
+@media(max-width:1200px){
+    .xq-foot{
+        display: none;
+    }
+}
+@media(max-width: 758px){
+    #main-left{
+        padding-right: 0;
+    }
+      .xq-author-date{
+      float: none;
+   }
+    /*---------y*/
+   .box{
+       padding:0 10px;
+    }
+}
+@media(max-width:500px){
+    .new-header ul li{
+        padding:20px 10px 10px 0px;
+    }
+}
+@media(max-width: 350px){
+   #form-control{
+       width:50%;
+   }
+ 
+}

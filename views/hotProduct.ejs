@@ -1,0 +1,126 @@
+<%include ./index_header.ejs%>
+    <link rel="stylesheet" href="/css/upline.css">
+    <link rel="stylesheet" href="/css/hotProduct.css">
+    <link rel="stylesheet" href="/css/electronics.css">
+    <link rel="stylesheet" href="/css/accessoryRim.css">
+<div class="box">
+    <!--  y-->
+    <div class="electronics">
+        <div class="container">
+            <div class="row">
+                <div class="content-nav col-md-12">
+                    <div class="col-md-8 nav-list-left">
+                        <ul class="ele-nav-list">
+                            <li>
+                                <a href="/ksy/newActive">最新活动</a>
+                            </li>
+                            <li class="rim-list">
+                                <span class="select-to">配件周边 <i></i></span>
+                                <ul class="show-rim-list">
+                                    <li>
+                                        <a href="/accessoryRim#home">全部</a>
+                                    </li>
+                                    <li>
+                                        <a href="/accessoryRim#/monitor">耳机</a>
+                                    </li>
+                                    <li>
+                                        <a href="/accessoryRim#phoneParts">充电器</a>
+                                    </li>
+                                    <li>
+                                        <a href="/accessoryRim#products">周边</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="rim-list">
+                                <span>热门产品 <i></i></span>
+                                <ul class="show-rim-list">
+                                    <li><router-link to="/hotAll">全部</router-link></li>
+                                    <li><router-link to="/jianguo">坚果手机文艺青年版</router-link></li>
+                                    <li><router-link to="/T2">Smartisan T2</router-link></li>
+                                    <li><router-link to="/M1">Smartisan M1 / M1L</router-link></li>
+                                    <li><router-link to="/Pro">坚果 Pro</router-link></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/ksy/upline">线下聚会</a>
+                            </li>
+                            <li>
+                                <a href="/ksy/travel">旅行活动</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hotProduct-box">
+        <div class="container">
+            <router-view></router-view>
+            
+          
+        </div>
+    </div>
+</div>
+
+<template id="hotProductAll">
+    <div>
+        <!-- 热门产品的每一块 -->
+        <div class="hotProduct-one" v-for="(item,index) in hotDetail">
+            <div class="hotProduct-one-head">{{item.head}}</div>
+            <div class="hotProduct-one-detail">
+                <div class="col-sm-3 hotProduct-img-box" v-for="itemimg in item.imgs">
+                    <div class="hotProduct-img">
+                        <img :src=itemimg alt="" @load='newId(index)'>
+                        <div class="hotProduct-img-black"><img src="/images/hot/poster-zoom.png" alt=""></div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+       <!--  <div class="hotMore" v-if="isMore">
+            <button>加载更多</button>  
+        </div> -->
+
+
+        <!-- 点击图片显示功能 -->
+        <div class="hotYc">
+            <div class="hotBg"></div>
+            <div class="hotShowImg">
+                <div class="hotShowImg-container">
+                    <div class="hotShowImg-container-header">
+                        <!-- <div class="fl counter">
+                            <span>1</span>/
+                            <span>5</span>
+                        </div> -->
+                        <div class="fr anniu">
+                            <!-- <i class="glyphicon glyphicon-zoom-out"></i>
+                            <i class="glyphicon glyphicon-zoom-in"></i> -->
+                            <i class="glyphicon glyphicon-remove imgHide"></i>
+                        </div>
+                    </div>
+                    <div class="bigImg">
+                        <img src="" alt="">
+                    </div>
+                    <div class="bigImg-title">
+                        <!-- {{item.head}} -->
+                    </div>
+                    <div class="bigImgs">
+                        <div class="bigImgs-one fl">
+                            <img src="" i=0 alt="">
+                            <img src="" i=1 alt="">
+                            <img src="" i=2 alt="">
+                            <img src="" i=3 alt="">
+                            <img src="" i=4 alt="">
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     
+    </div>
+</template>
+    <script src='/js/accessoryRim/hotProduct-vue.js'></script>
+    <script src='/js/accessoryRim/hotProduct.js'></script>
+
+<%include ./index_footer.ejs%>

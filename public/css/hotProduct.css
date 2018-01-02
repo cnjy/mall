@@ -1,0 +1,236 @@
+/*----------------全局样式-----------------*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+ul li{list-style: none; } 
+a{text-decoration: none; color:black;}
+a:hover{text-decoration: none;}
+a img{border:none;}
+body{margin: 0 auto; font-family: "Microsoft YaHei";overflow-x: hidden;  background-color:#ededed;}
+.fl{float: left; }
+.fr{float: right; }
+html{
+    background-color:#ededed;
+}
+
+.hotProduct-box{
+     background-color:#ededed;
+}
+.hotProduct{
+    position:relative;
+}
+.hotList{
+    width: 160px;
+    position:absolute;
+    top:50px;
+    z-index: 1;
+    border:1px solid #ededed;
+    background: white;
+    left:-20px;
+    border-radius: 5px;
+    padding-bottom: 20px;  
+    display: none;
+    padding-top: 10px;
+}
+.hotList li{
+    height: 40px;
+    width: 100%;
+}
+#hotList li{
+    padding:0;
+    padding-right: 20px;   
+    cursor:pointer;
+}
+#hotList li a{
+    padding: 10px;
+    display: block;
+    height: 40px;
+
+}
+#hotList li:hover{
+    background: #ededed;
+}
+.hotProduct-one-head{
+    border:1px solid #e5e5e5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding:15px 30px;
+    background: linear-gradient(#fbfbfb, #ececec);
+    font-size: 18px;
+    color:#37474f;
+}
+.hotProduct-one-detail{
+    border:1px solid #e5e5e5;
+    padding:20px;
+    overflow: hidden;
+    background: white;
+    margin-bottom: 30px;
+}
+.hotProduct-img-box{
+    margin-bottom:10px;
+}
+
+.hotProduct-img{
+    border:1px solid #e5e5e5;
+    position: relative;
+ 
+}
+
+.hotProduct-img img{
+    width:100%;
+
+}
+.hotProduct-img-black{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top:0;
+    display: none;
+}
+.hotProduct-img-black img{
+    width: 20px;
+    height: 20px;
+    margin-left:50%;
+    margin-top: 35%;
+}
+.hotProduct-one-detail .hotProduct-img-box{
+    padding-right: 5px;
+    padding-left:5px;
+}
+
+.hotMore{
+    margin-bottom:30px;
+}
+.hotMore button{
+    width: 100%;
+    color:#8d8d8d;
+    border-radius: 5px;
+    border:1px solid #dcdcdc;
+    background-image:linear-gradient(rgba(255,255,255,255), rgba(0,0,0,0.03));
+    height:40px;
+    line-height: 40px;
+    outline: none;
+
+}
+.hotMore button:hover{
+    background-image: linear-gradient(rgba(255,255,255,0.06), rgba(0,0,0,0.06));
+
+}
+
+
+
+.goup{
+    animation-name:slide-up; 
+    animation-duration:1s; 
+    animation-timing-function:ease; 
+    animation-fill-mode: both;
+}
+/*按钮动画   滚动到相应位置再添加*/
+/*@keyframes slide-up{
+    0%{
+        opacity:0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100%{
+        opacity:1;
+        transform: translate3d(0, 0, 0);
+    }
+}*/
+
+
+
+
+
+
+
+/*图片显示放大*/
+.hotYc{
+    display: none;
+}
+.hotBg{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background: black;
+    opacity: 0.65;
+}
+.hotShowImg{
+    width: 100%;
+    position:fixed;
+    z-index: 111;
+    top:0;
+    left:0;
+
+}
+.hotShowImg-container{
+    margin:10px auto;  
+    background: white;
+    height:570px;
+    width:800px;
+    border-radius: 8px;
+}
+.hotShowImg-container-header{
+    height: 50px;
+    line-height: 50px;
+    border-bottom:1px solid  #ededed;
+    padding:0 20px;
+}
+.counter,.anniu{
+    display: inline-block;
+    font-size: 18px;
+    color:#aaa;
+}
+.anniu i{
+    margin-left: 10px;
+    font-weight: 100;
+}
+.bigImg {
+    max-height: 400px;
+}
+.bigImg img{
+    width: 100%;
+    max-height: 400px;
+}
+
+.bigImg-title{
+    height: 40px;
+    background: black;
+    color:white;
+    line-height: 40px;
+    padding-left: 50px;
+    font-size:16px;
+}
+
+.bigImgs{
+    height: 80px;
+    background: #e5e5e5;
+}
+.bigImgs-one img{
+    width: 75px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    float: left;
+}
+.imgHide{
+    cursor: pointer;
+}
+
+/*响应式*/
+@media(max-width:820px){
+    .hotShowImg-container{
+        width:100%;
+    }
+    .hotShowImg{
+        padding:0 10px;
+    }
+    .bigImg img{
+        max-height:350px;
+    }
+    .bigImgs{
+        height:100%;
+    }
+}

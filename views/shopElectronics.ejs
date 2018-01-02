@@ -1,0 +1,187 @@
+<% include ./index_header.ejs%>
+<link rel="stylesheet" href="/css/electronics.css">
+    <div class="electronics">
+        <div class="container">
+            <div class="row">
+                <div class="content-nav col-md-12">
+                    <div class="col-md-8 nav-list-left">
+                        <ul class="ele-nav-list">
+                            <li>
+                                <router-link to="/home">全部</router-link>
+                            </li>
+                            <li>
+                                <router-link to="/phoneHot">热门手机</router-link>
+                            </li>
+                            <li>
+                                <router-link to="/monitor">耳机音响</router-link>
+                            </li>
+                            <li>
+                                <router-link to="/phoneParts">手机配件</router-link>
+                            </li>
+                            <li>
+                                <router-link to="/products">周边产品</router-link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 nav-search">
+                        <div class="input-search">
+                            <button class="search-btn">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            <input type="text" placeholder=" 输入搜索更多">
+                        </div>
+                    </div>
+                </div>
+                <div class="ele-shop-list">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template id="electronics-all">
+        <div class="ele-all-box">
+            <ul class="col-md-12 ele-all-list">
+                <li class="col-md-3 col-xs-6" v-for="(item,index) of allElectronics">
+                    <div class="shop-single-li">
+                        <a href="./shopCart">
+                            <img :src=item.img alt="" @load="allEleId(index)">
+                        </a>
+                        <h4 class="ele-tit">
+                            <a href="">{{item.tit}}</a>
+                            <p class="ele-txt">{{item.txt}}</p>
+                            <span class="btn-detail">
+                            <a href="./shopCart">查看详情</a>
+                        </span>
+                            <p class="products-price">{{item.price}}</p>
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+            <div class="ele-all-change">
+                <div class="met-pager">
+                        <span class="pager-sp">
+                            <router-link to="/" class="sel-a">1</router-link>
+                            <router-link to="/nextAll">2</router-link>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="electronics-hot">
+        <div class="ele-all-box">
+            <ul class="col-md-12 ele-all-list">
+                <li class="col-md-3 col-xs-6" v-for="(item,index) of hotShop">
+                    <div class="shop-single-li">
+                        <a href="./shopCart">
+                            <img :src=item.img alt="" @load="hotEleId(index)">
+                        </a>
+                        <h4 class="ele-tit">
+                            <a href="">{{item.tit}}</a>
+                            <p class="ele-txt">{{item.txt}}</p>
+                            <span class="btn-detail">
+                            <a href="./shopCart">查看详情</a>
+                        </span>
+                            <p class="products-price">{{item.price}}</p>
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <template id="electronics-mon">
+        <div class="ele-all-box">
+            <ul class="col-md-12 ele-all-list">
+                <li class="col-md-3 col-xs-6" v-for="(item,index) of monShop">
+                    <div class="shop-single-li">
+                        <a href="./shopCart">
+                            <img :src=item.img alt="" @load="monEleId(index)">
+                        </a>
+                        <h4 class="ele-tit">
+                            <a href="">{{item.tit}}</a>
+                            <p class="ele-txt">{{item.txt}}</p>
+                            <span class="btn-detail">
+                            <a href="./shopCart">查看详情</a>
+                        </span>
+                            <p class="products-price">{{item.price}}</p>
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <template id="electronics-par">
+        <div class="ele-all-box">
+            <ul class="col-md-12 ele-all-list">
+                <li class="col-md-3 col-xs-6" v-for="(item,index) of parShop">
+                    <div class="shop-single-li">
+                        <a href="./shopCart">
+                            <img :src=item.img alt="" @load="parEleId(index)">
+                        </a>
+                        <h4 class="ele-tit">
+                            <a href="">{{item.tit}}</a>
+                            <p class="ele-txt">{{item.txt}}</p>
+                            <span class="btn-detail">
+                            <a href="./shopCart">查看详情</a>
+                        </span>
+                            <p class="products-price">{{item.price}}</p>
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <template id="electronics-pro">
+        <div class="ele-all-box">
+            <ul class="col-md-12 ele-all-list">
+                <li class="col-md-3 col-xs-6" v-for="(item,index) of proShop">
+                    <div class="shop-single-li">
+                        <a href="./shopCart">
+                            <img :src=item.img alt="" @load="proEleId(index)">
+                        </a>
+                        <h4 class="ele-tit">
+                            <a href="">{{item.tit}}</a>
+                            <p class="ele-txt">{{item.txt}}</p>
+                            <span class="btn-detail">
+                            <a href="./shopCart">查看详情</a>
+                        </span>
+                            <p class="products-price">{{item.price}}</p>
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <template id="next-all">
+        <div class="ele-all-box">
+            <ul class="col-md-12 ele-all-list">
+                <li class="col-md-3 col-xs-6" v-for="(item,index) of nextAllShop">
+                    <div class="shop-single-li">
+                        <a href="./shopCart">
+                            <img :src=item.img alt="" @load="nextEleId(index)">
+                        </a>
+                        <h4 class="ele-tit">
+                            <a href="">{{item.tit}}</a>
+                            <p class="ele-txt">{{item.txt}}</p>
+                            <span class="btn-detail">
+                            <a href="./shopCart">查看详情</a>
+                        </span>
+                            <p class="products-price">{{item.price}}</p>
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+            <div class="ele-all-change">
+                <div class="met-pager">
+                        <span class="pager-sp">
+                            <router-link to="/">1</router-link>
+                            <router-link to="/nextAll" class="sel-a">2</router-link>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="./js/shopElectronics/electronics_vue.js"></script>
+    <script src="./js/shopElectronics/electronics.js"></script>
+<% include ./index_footer.ejs %>
+
+

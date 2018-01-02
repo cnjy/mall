@@ -1,0 +1,145 @@
+<% include ./personal_header %>
+<body>
+    <div class="personal">
+        <div class="container">
+            <div class="page-content">
+                <div class="col-md-12 menu-list menu">
+                    <button class="btn btn-primary btn-block dropdown-toggle">我的订单
+                        <i class="glyphicon glyphicon-triangle-bottom"></i>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <% include ./personal_content %>
+                </div>
+                <div class="col-md-9 shop-profile">
+                    <div class="card-content">
+                        <div class="panel-body shop-order">
+                            <div>
+                                <ul class="nav-tab">
+                                    <li>
+                                        <router-link to="/order">全部有效订单</router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/pay">待支付 <i></i></router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/take">待收货 <i></i></router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/close">已关闭</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+                            <router-view></router-view>
+                        </div>
+                        <template id="order">
+                            <div>
+                                <div class="order-shop-keyword">
+                                    <div class="from-group">
+                                        <div class="input-search">
+                                            <button class="input-search-btn">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </button>
+                                            <input type="text" placeholder="订单号、商品名称" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-order-list">
+                                    <div class="order-list-box">
+                                        <div class="row list-box-top">
+                                            <div class="col-md-8 col-sm-8 ting">
+                                                <h4>待支付</h4>
+                                                <span class="info">订单号 : 2017120409074341856</span>
+                                                <span class="info">2017-12-04 09:07:43</span>
+                                                <span class="info">在线支付</span>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 ting text-sm-right">
+                                                订单金额：<span class="price">{{total}}.00元</span>
+                                            </div>
+                                        </div>
+                                        <div class="row list-box-bottom" v-for='item of shopAll'>
+                                            <div class="col-sm-6 col-xl-8">
+                                                <div class="media-xs">
+                                                    <div class="media-xs-left">
+                                                        <a href="/shopCart" @click='toShopCart(item.id)'>
+                                                            <img :src=item.img alt="" :title=item.title>
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-xs-body">
+                                                        <h4>
+                                                            <a href="/shopCart" @click='toShopCart(item.id)'>{{item.title}}</a>
+                                                        </h4>
+                                                        <p>
+                                                            {{item.price}}.00元
+                                                            <i>x</i>
+                                                            <i style="color: #f96868;font-size: 16px;">{{item.value}}</i>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-3 col-xl-2 ">
+                                                <a href="/orderDetail" class="btn btn-outline btn-default btn-squared"
+                                                   @click="toDetail(item.id)">订单详情</a>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-3 col-xl-2 ">
+                                                <a href="/" class="btn btn-danger btn-squared">立即付款</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-order-more-btn">
+
+                                </div>
+                            </div>
+                        </template>
+                        <template id="take">
+                            <div>
+                                <div class="order-shop-keyword">
+                                    <div class="from-group">
+                                        <div class="input-search">
+                                            <button class="input-search-btn">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </button>
+                                            <input type="text" placeholder="订单号、商品名称" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-order-list">
+                                    <div class="order-list-box order-title">
+                                        <div class="title-box">没有符合条件的订单</div>
+                                    </div>
+                                </div>
+                                <div class="shop-order-more-btn">
+
+                                </div>
+                            </div>
+                        </template>
+                        <template id="close">
+                            <div>
+                                <div class="order-shop-keyword">
+                                    <div class="from-group">
+                                        <div class="input-search">
+                                            <button class="input-search-btn">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </button>
+                                            <input type="text" placeholder="订单号、商品名称" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-order-list">
+                                    <div class="order-list-box order-title">
+                                        <div class="title-box">没有符合条件的订单</div>
+                                    </div>
+                                </div>
+                                <div class="shop-order-more-btn">
+
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/personal/order_vue.js"></script>
+<%include ./footer2.ejs%>

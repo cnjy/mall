@@ -1,0 +1,46 @@
+/*----------------全局样式-----------------*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+ul li{list-style: none; } 
+a{text-decoration: none; color:black;}
+a:hover{text-decoration: none;}
+a img{border:none;}
+
+body{margin: 0 auto; font-family: "Microsoft YaHei";background-color:#ededed;}
+.fl{float: left; }
+
+
+.footer2{
+    margin-top: 20px;
+}
+.footnav{
+    background: white;
+    padding:20px;
+    border-bottom: 1px solid #f0f2f5;
+}
+.footnav ul{
+    overflow: hidden; 
+}
+.footnav ul li{
+    margin-top: 10px;
+}
+.footnav ul li a{
+    font-size:16px;
+    color: #777
+}
+.footnav ul li a:hover{
+    color:#4E97D9;
+}
+.footCopy{
+    background: white;
+    padding:20px 0;
+    color:#aaa;
+}
+@media(max-width: 350px){
+    html{
+        min-width: 320px;
+    }
+    .footnav ul li{
+        width:50%;
+    }
+}

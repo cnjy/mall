@@ -1,0 +1,150 @@
+<% include ./index_header.ejs%>
+<link rel="stylesheet" href="/css/shopCart.css">
+    <section>
+        <div class="shopDetail">
+            <!--购物车-->
+            <div class="container shopCart">
+                <div class="row">
+                    <div class="shopCart-nav">
+                        <ul class="shopCart-list">
+                            <li>
+                                <a href="./shopElectronics">全部</a>
+                            </li>
+                            <li>
+                                <a href="" class="/shopElectronics#/show-cart">热门手机</a>
+                            </li>
+                            <li>
+                                <a href="/shopElectronics#/monitor">耳机音响</a>
+                            </li>
+                            <li>
+                                <a href="/shopElectronics#/phoneParts">手机配件</a>
+                            </li>
+                            <li>
+                                <a href="/shopElectronics#/products">周边产品</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="met-showproduct">
+                        <div class="grey-box">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="shopCart-single">
+                                        <div class="shopCart-single-img">
+                                            <div class="btn-left btn-box" @click="changeLeft()"> < </div>
+                                            <div class="phone-single">
+                                                <img :src=item.img alt=""
+                                                     v-for="item of shopCart[0].phoneImg" @load="pImg()">
+                                            </div>
+                                            <div class="btn-right btn-box" @click="changeRight()"> > </div>
+                                        </div>
+                                        <div class="shopCart-single-list">
+                                            <div class="shopCart-phone" v-for="(item, index) of shopCart[0].phoneImg">
+                                                <img :src=item.img alt="" @click="sImg(index)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="row phone-cal">
+                                        <h2>{{shopCart[0].content.title}}</h2>
+                                        <p class="description">{{shopCart[0].content.txt}}</p>
+                                        <div class="shop-product">
+                                            <div class="shop-price">
+                                                <span>{{shopCart[0].content.price | myFil}}</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="shop-num">
+                                                    <p>数量 </p>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="group-sub" @click="subShop()">-</span>
+                                                    <input type="text" class="input" value="1" readonly="readonly">
+                                                    <span class="group-add" @click="addShop()">+</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-num">
+                                                <p>
+                                                    库存 <span>{{shopCart[0].content.all}}</span> 件
+                                                </p>
+                                            </div>
+                                            <div class="purchase-btn col-xs-12">
+                                                <a href="#" class="btn btn-squared btn-lg btn-warning product-favorite collect" @click='collect()'>
+                                                    加入收藏
+                                                </a>
+                                                <a href="#" class="btn btn-lg btn-squared btn-primary
+                                            margin-right-20 product-tocart col-xs-5 btn-add-cart" @click="addShopCart()">
+                                                    加入购物车
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--产品信息-->
+            <div class="met-shop-message">
+                <div class="container no-space">
+                    <div>
+                        <div class="col-md-9 product-content-body">
+                            <div class="row">
+                                <div class="shop-panel">
+                                    <p class="panel-tit">
+                                        <span>产品信息</span>
+                                    </p>
+                                    <div class="tab-canter">
+                                        <div class="tab-pane">
+                                            <div class="shop-details" style="text-align: center">
+                                                <p v-for="item of shopCart[0].shopDetails">
+                                                    <img :src=item.img alt="">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 shop-side">
+                            <div class="product-hot">
+                                <div class="panel-body">
+                                    <div class="panel-body-tit">
+                                        <h4>其他商品</h4>
+                                    </div>
+                                    <ul class="mob-masonry">
+                                        <li v-for="(item,index) of sidebarImg" class="mob-single">
+                                            <a href="#" class="mob-img">
+                                                <img :src=item.img alt=""
+                                                     :title=item.title @load="restTo(index)">
+                                            </a>
+                                            <a href="#" class="mob-tit">{{item.title}}</a>
+                                            <p>{{item.price}}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alertify">
+                <div class="to-login">
+                    <div>
+                        <p>请先登录</p>
+                    </div>
+                    <nav>
+                        <button class="btn btn-default cancel" @click="cancel()">取消</button>
+                        <button class="btn btn-primary ok" @click="toLogin()">确定</button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <script src="js/shopCart/shopCart_Vue.js"></script>
+    <script src="js/shopCart/shopCart.js"></script>
+<% include ./index_footer.ejs%>

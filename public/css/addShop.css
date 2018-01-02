@@ -1,0 +1,588 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+*{
+    user-select: none;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    background-color: #dddddd;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+/*头部*/
+.met-nav{
+    width: 100%;
+    margin:0 auto;
+    min-height: 60px;
+    line-height: 60px;
+    border-color: #e4eaec;
+    background-color: #fff;
+    overflow: hidden;
+}
+.nav-logo{
+    display: inline-block;
+    height: 100%;
+}
+.nav-logo>a{
+    display: block;
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+    font-size: 0;
+}
+.pull-md-right{
+    float: right;
+    height: 100%;
+}
+.pull-md-left{
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+.text-enter{
+    color: #62a8ea;
+    background-color: transparent;
+    border-color: #62a8ea;
+    margin-right: 15px;
+}
+.text-enter:hover{
+    border-color: #62a8ea;
+    background-color: #62a8ea;
+}
+.dropdown{
+    display: none;
+}
+.met-head-user li{
+    display: inline-block;
+    margin-left: 15px;
+    height: 60px;
+}
+.vertical-align-middle>a{
+    display: block;
+    background-color: #f5f5f5;
+    transition: all .4s;
+    color: #2a333c;
+    padding: .572rem 1.072rem;
+    border-radius: .215rem;
+    height: 40px;
+    line-height: 29px;
+    margin-top: 10px;
+    position: relative;
+}
+.vertical-align-middle>a:hover{
+    text-decoration: none;
+    color: #4E97D9;
+}
+.vertical-align-middle>a>i{
+    width: 1em;
+    margin-right: .5em;
+    text-align: center;
+    color: #333;
+}
+.vertical-align-middle>a>span{
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    font-size: 12px;
+    padding: 3px 6px;
+    background-color: #f96868;
+    line-height: 1;
+    color: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+/*添加至购物车栏*/
+.page{
+    background-color: #f2f2f2;
+}
+.page-content{
+    padding-top: 30px;
+}
+.panel{
+    position: relative;
+    margin-bottom: 1.875rem;
+    background-color: #fff;
+    border: 0 solid transparent;
+    border-radius: .286rem;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel-body{
+    position: relative;
+    padding: 30px 30px;
+    transition: opacity .3s;
+}
+.media{
+    overflow: hidden;
+}
+.media-left{
+    display: table-cell;
+    margin-right: 20px;
+}
+.media-left img{
+    width: 120px;
+}
+.media-heading{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.media-heading a{
+    font-size: 19px;
+}
+.media-heading a:hover{
+    text-decoration: none;
+    font-weight: 400;
+}
+.success-tit{
+    font-size: 18px;
+    color: greenyellow;
+}
+.tocar-btn-body{
+    margin-top: 40px;
+    padding-right: 20px;
+    text-align: right;
+}
+.tocar-btn-body a{
+    margin-left: 15px;
+}
+.btn-a01{
+    background: #e4eaec;
+    color: #666666;
+}
+.btn-a01:hover{
+    color: #333;
+}
+
+/*推荐商品栏*/
+.text-center{
+    margin-top: 40px;
+}
+.text-xs-center>h3{
+    color: #a3afb7;
+    text-align: center;
+}
+.recommend-shop{
+}
+.recommend-single{
+    position: relative;
+    padding:0px 10px;
+    margin-top: 35px;
+}
+.single-body{
+    background-color: #fff;
+    padding:20px 0;
+}
+.single-body:hover img{
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+    transform: scale(1.06);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.single-body>a{
+    display: block;
+    font-size: 0;
+    overflow: hidden;
+}
+.single-body>a img{
+    width: 100%;
+}
+.card-title{
+    text-align: center;
+    padding-bottom: 8px;
+    overflow: hidden;
+
+}
+.card-title>a{
+    color: #62a8ea;
+    display: block;
+    font-weight: 300;
+    margin: 12px 0;
+    transition: .3s;
+}
+.card-title>a:hover{
+    text-decoration: none;
+    font-weight: 400;
+}
+.card-title>p{
+    color: #f96868;
+    font-size: 15px;
+}
+
+/*商品结算*/
+.settle-shop{
+    position: relative;
+    margin-bottom: 1.875rem;
+    background-color: #fff;
+    border: 0 solid transparent;
+    border-radius: .286rem;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.cart-body{
+    position: relative;
+    padding: 20px 30px;
+}
+.table-responsive{
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    min-height: .01%;
+}
+.table{
+    overflow: hidden;
+    margin-bottom: 0px;
+    color: #76838f;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+.table th{
+    border-top: none;
+    font-weight: 500;
+    color: #526069;
+    border-bottom-width: 1px;
+    vertical-align: bottom;
+    padding: .572rem;
+    text-align: center;
+}
+.checkbox-danger{
+    cursor: pointer;
+}
+.checkbox-danger input{
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+.checkbox-danger i{
+     position: absolute;
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     top: 25px;
+     color: #f96868;
+     left: 75px;
+     font-size: 20px;
+ }
+.table tr{
+    text-align: center;
+    line-height: 120px;
+    overflow: hidden;
+}
+.table tr td{
+    margin-top: 10px;
+    overflow: hidden;
+    vertical-align: middle !important;
+}
+.buyNumber{
+    overflow: hidden;
+}
+.is-buy{
+    display: none;
+}
+.input-box{
+    display: inline-block;
+    width: 100%;
+}
+.shop-tr-box{
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+.shop-tr-box input{
+    top: 0px;
+    left: 37px;
+}
+.shop-tr-box i{
+    left: 37px;
+    height: 26px;
+    top: 1px;
+}
+.input-box{
+    width: 160px;
+    height: 36px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.input-box span{
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    width: 39px;
+    height: 36px;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-size: 15px;
+    color: #aaa;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.group-sub {
+    float: left;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-right: 0 !important;
+}
+.group-add{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: 0 !important;
+    margin-left: -32px;
+}
+.input-box input{
+    box-sizing: border-box;
+    width: 50px;
+    height: 36px;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    border: 1px solid #ccc;
+}
+.buyNumber{
+    margin-top: 10px;
+}
+.bootstrap-touchspin-down{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 6px 16px;
+}
+.buyNumber p{
+    margin-top: 10px;
+    color: #f2a654;
+}
+.settle-shop-mes{
+    width: 100%;
+    height: 96px;
+    margin-top: 12px;
+    padding: 0;
+}
+.shop-mes{
+    padding: 0!important;
+}
+.set-left{
+    padding: 0;
+}
+.set-left a{
+    display: block;
+    text-align: left;
+}
+.set-left>a>img{
+    width: 80px;
+}
+.set-right{
+   text-align: left;
+    margin-top: 10px;
+}
+.set-right h4 a{
+    font-size: 15px;
+}
+.set-right h4 a:hover{
+    text-decoration: none;
+}
+.smallSum{
+    color: #f96868;
+}
+.remove-shop{
+    font-size: 20px;
+    color: #CCD5DB;
+    text-decoration: none;
+    transition: all .5s;
+}
+.remove-shop:hover{
+    text-decoration: none;
+}
+.remove-shop i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.shop-hide{
+    display: none;
+}
+.cart-total{
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fff;
+}
+.cart-all{
+    text-align: center;
+}
+.cart-all-box{
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+.cart-all-box input{
+    top: 8px;
+    left: 50px;
+}
+.cart-all-box i{
+    top: 8px;
+    left: 50px;
+}
+.total-text-right{
+    text-align: right;
+    padding-top: 10px;
+}
+.total{
+    font-size: 23px;
+    color: #f96868;
+}
+.value{
+    font-size: 22px;
+    color: #f96888;
+}
+.cart-tocheck{
+    padding:10px 35px;
+}
+.add-shop-body{
+    min-height: 160px !important;
+}
+.all-box .all{
+    left: 50px;
+    height: 26px;
+    top: 6px;
+}
+.call{
+    margin: -28px 80px 0 0;
+    cursor: pointer;
+    float: right;
+}
+.check-td{
+    width:80px;
+}
+.price-p{
+    display: none;
+}
+@media screen and (max-width: 1200px){
+    .call{
+        margin:-28px 30px 0 0;
+    }
+
+}
+@media screen and (max-width: 990px){
+    .panel {
+        display: block;
+    }
+    .call{
+        margin:-28px 140px 0 0;
+    }
+     .all-box .all{
+        top: -5px;
+    }
+    .cart-all-box input {
+        top: -4px;
+    }
+}
+@media screen and (max-width: 768px){
+    thead{
+        display: none;
+    }
+    .table>tbody>tr>.price-td{
+        display: none;
+    }
+    .price-p{
+        display: block;
+    }
+    .table>tbody>tr>.total-td{
+        display: none;
+    }
+}
+@media screen and (max-width: 720px){
+    .call{
+        margin:-28px 60px 0 0;
+    }
+}
+@media screen and (max-width: 610px){
+    .check-td{
+        width: 65px;
+    }
+    .is-buy{
+        display: block;
+    }
+    .table>tbody>tr>.change-td{
+        display: none;
+    }
+    .settle-shop-mes {
+        height: 120px;
+    }
+    .group-add{
+        margin-left: 0;
+    }
+    .set-left>a>img{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 480px){
+    .card-title a {
+        font-size: 15px;
+    }
+    .btn-squared{
+        padding: 8px 10px;
+    }
+    .cart-all-box {
+        margin:0;
+        margin-left: -15px;
+        text-align: left;
+    }
+     .call{
+        margin:-18px -10px 0 0;
+    }
+}
+@media screen and (max-width: 418px){
+    .card-title a {
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .tocar-btn-body{
+        padding-right: 0;
+        text-align: left;
+    }
+    .tocar-btn-body a{
+        margin-left: 0;
+    }
+    .set-right{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .shop-tr-box input{
+        left: 10px;
+    }
+    .check-td {
+        width: 20px;
+    }
+    .set-left a {
+        margin-left: -10px;
+    }
+}

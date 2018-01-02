@@ -1,0 +1,361 @@
+<%include ./index_header.ejs%>
+<link rel="stylesheet" href="/css/service.css">
+	<div class="container" id="service-link">
+		<div class="service-title">
+			<ul>
+				<li>
+					<router-link to="/">服务支持</router-link>
+				</li>
+				<li>
+					<router-link to="/buy">购买指南</router-link>
+				</li>
+				<li>
+					<router-link to="/hots">热点咨询</router-link>
+				</li>
+				<li>
+					<router-link to="/yuyue">预约购买</router-link>
+				</li>
+				<li>
+					<router-link to="/shouhou">售后服务</router-link>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<router-view></router-view>
+		</div>
+	</div>
+	<!-- 服务支持 -->
+	<template id="service">
+		<div>
+			<section class="wenzhang">
+			<ul class="wz-zhichi">
+				<li class="wz-list">
+					<div class="wz-box">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-charger"></i>
+						 <p class="wz-title">零配件价格</p>
+
+						</div>
+						<p class="wz-text">通过手机型号查询手机配件和手机附件的参考价格。</p>
+					</div>
+				</li>
+				<li class="wz-list">
+					<div class="wz-box">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-positioning"></i>
+						 <p class="wz-title">服务网点查询</p>
+
+						</div>
+						<p class="wz-text">OPPO服务网点查询，为您提供更专业的服务。</p>
+					</div>
+				</li>
+				<li class="wz-list">
+					<div class="wz-box">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-yun"></i>
+						 <p class="wz-title">手机升级</p>
+
+						</div>
+						<p class="wz-text">根据机型下载最新固件包升级。</p>
+					</div>
+				</li>
+				<li class="wz-list">
+					<div class="wz-box" style="border-right:0">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-yanjing"></i>
+						 <p class="wz-title">真伪查询</p>
+
+						</div>
+						<p class="wz-text">通过手机 IMEI 号查询对应的产品信息。</p>
+					</div>
+				</li>
+				<li class="wz-list">
+					<div class="wz-box">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-baoguo-kongxin"></i>
+						 <p class="wz-title">寄修服务</p>
+
+						</div>
+						<p class="wz-text">运费全免，足不出户即可享受OPPO便捷专业的寄修服务。</p>
+					</div>
+				</li>
+				<li class="wz-list">
+					<div class="wz-box">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-biao"></i>
+						 <p class="wz-title">维修进度查询</p>
+
+						</div>
+						<p class="wz-text">通过手机号码或 IMEI 号查询手机的维修处理状态。</p>
+					</div>
+				</li>
+				<li class="wz-list">
+					<div class="wz-box">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-weixiuzhong11"></i>
+						 <p class="wz-title">预约维修</p>
+
+						</div>
+						<p class="wz-text">提前预约手机维修，无需排队即可尊享快捷优质服务。</p>
+					</div>
+				</li>
+				<li class="wz-list">
+					<div class="wz-box" style="border-right:0">
+						<div class="wz-tupian">
+						 <i class="iconfont icon-baozhang"></i>
+						 <p class="wz-title">保障服务查询</p>
+
+						</div>
+						<p class="wz-text">通过手机 IMEI 号查询延长保、屏碎保和意外保的状态信息。</p>
+					</div>
+				</li>
+			</ul>	
+		</section>
+		</div>
+	</template>
+	<!-- 购买指南 -->
+	<template id="buy">
+		<div>
+			<section class="purchase">
+				<div class="container">
+					<div class="row">
+						<div class="purchase-guide">
+							<div>
+								<p>购买指南</p>
+								<p><span style="font-size:13px">尊敬的用户您好，感谢您选择我们的产品，如您在购买的过程中遇到任何疑问，请及时联系官网在线客服。</span></p>
+								<p><span>常见问题</span></p>
+								<p><span style="font-size:13px">问：官网购买手机支持哪些支付方式？<br></span></p>
+								<p><span style="font-size:13px">答：官网购买目前只支持在线支付，包括支付宝、微信支付、银联在线、网银支付、招行分期。［详情］</span></p>
+								<p><span style="font-size:13px">问：如何查询订单状态？</span></p>
+								<p><span style="font-size:13px">答：请您使用下单的账户登录锤子科技官方网站，在个人中心中查看。</span></p>
+								<p><span style="font-size:13px">问：订单取消后退款什么时候到账？</span></p>
+								<p><span style="font-size:13px">答：退款周期约为 3-20 个工作日（支付宝为 3-10 个工作日；微信为 2-5 个工作日；银联为 7-20 个工作日；招行分期为 3-20 个工作日）。</span></p>
+								<p><span style="font-size:13px">问：订购手机时没有购买意外损坏保修服务，可以单独购买吗？<br></span></p>
+								<p><span style="font-size:13px">答：您可以在手机初次联网激活时或收货次日起 3 日内在线购买。具体的购买方法为：访问网站购买或在手机的“设置 > 关于本机 > 保修服务”中购买。</span></p>
+								<p><span style="font-size:13px">问：没有收到激活邮件？</span></p>
+								<p><span style="font-size:13px">答：激活邮件通常会在一到两分钟内发送到您的邮箱。如果您没有收到，可能是邮件系统错误地将激活邮件识别为垃圾邮件。请检查您的垃圾邮件目录，如果找到激活邮件，请将邮件地址设为可信的发件人，并点击激活链接。</span></p>
+								<p><span style="font-size:13px">问：没有收到验证码？<br></span></p>
+								<p><span style="font-size:13px">答：验证码通常会在 10 至 30 秒内发送到您的手机上。如果一直没有收到验证码，请按以下步骤操作：</span></p>
+								<p><span style="font-size:13px">1、您的手机系统可能错误的将我们的短信识别为垃圾短信，请检查您的手机系统中的垃圾短信屏蔽历史，或关闭屏蔽功能后，在我们的官网页面上重新发送验证码；</span></p>
+								<p><span style="font-size:13px">2、您有可能曾经通过短信、电话、网站等方式向您的手机服务运营商或相关监管部门设置屏蔽或者投诉过垃圾短信。您可以尝试联系您的手机服务运营商关闭此屏蔽功能后，在我们的官网页面上重新发送验证码；</span></p>
+								<p><span style="font-size:13px">3、如果您尝试以上方法后依然无法收到验证码，请致电客服咨询：400-888-6969。</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		</div>
+	</template>
+	<!-- 热点咨询 -->
+	<template id="hots">
+		<div>
+			<section class="hotspot purchase">
+				<div class="container">
+					<div class="row">
+						<div class="purchase-guide">
+							<div>
+								<p>热点咨询专题F&Q</p>
+								<p><span style="font-size:13px">Q1在哪里可以购买本公司产品？</span></p>
+								<p><span style="font-size:13px">您可以在锤子科技官方商城购买。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q2 Pro 手机有哪些颜色？</span></p>
+								<p><span style="font-size:13px">手机有碳黑色（32GB/64GB/128GB）、酒红色（64GB/128GB）、和细红线特别版（128GB）三种颜色。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q3官网购买产品，下单后多长时间支付有效？</span></p>
+								<p><span style="font-size:13px">官网购买手机，需在下单成功后 15 分钟内支付，超过 15 分钟未支付的订单会被关闭。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q4官网购买的产品，什么时候发货？</span></p>
+								<p><span style="font-size:13px">现货购买方式：官网手机订单会在您支付成功后 5天内发货；</span></p>
+								<p><span style="font-size:13px">全款预订方式：手机订单发货时间以成功付款后在【我的订单】-【订单详情】中更新的发货日期为准。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q5 手机如何截屏？</span></p>
+								<p><span style="font-size:13px">按下面方式同时按下组合键可截屏：</span></p>
+								<p><span style="font-size:13px">音量下键 + HOME 键，或 音量键下 + 电源键，或 电源键 + HOME 键。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q6 手机可以使用哪种接口的耳机？</span></p>
+								<p><span style="font-size:13px">可使用 USB TYPE-C 接口的耳机，或通过附带的转接线连接 3.5mm 接口的 “国标”和“美标”耳机。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q7 手机如何强制重新启动？</span></p>
+								<p><span style="font-size:13px">长按电源键 12 秒以上可强制重启手机。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q8 发布会中讲到的“图钉”和“字体识别”功能如何开启？</span></p>
+								<p><span style="font-size:13px">“图钉”和“字体识别”功能预计在 Remixus OS 2.0 版本中加入，请耐心等待。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q9 升级 Remixus OS 2.0 后，怎样开启“闪念胶囊”功能？</span></p>
+								<p><span style="font-size:13px">Remixus OS 2.0 版本中的闪念胶囊是测试版，需在【设置】-【全局高级设置】-【闪念胶囊测试版】中点击【开启闪念胶囊】，经过两次确认后可开启闪念胶囊功能。</span></p>
+								<p><span style="font-size:13px">更新至 v3.6.1 版本后，桌面上会显示闪念胶囊应用图标。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q10 手机能否在中国大陆以外的地区使用？</span></p>
+								<p><span style="font-size:13px">坚果 Pro 手机仅在中国大陆地区销售，其他国家和地区没有经过测试，不能确保一定可以使用，还请理解。</span></p>
+								<p><br></p>
+								<p><span style="font-size:13px">Q11 电子发票能否用于企业报销？如何填写电子发票抬头？</span></p>
+								<p><span style="font-size:13px">电子发票打印后可以用于企业报销，购买商品过程中，您可在“提交订单”页面填写电子发票抬头。</span></p>
+								<p><span style="font-size:13px">电子发票抬头以您填写为准，如果未填写，则电子发票抬头为“个人”，订单提交后不支持修改发票抬头。</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		</div>
+	</template>
+	<!-- 预约购买 -->
+	<template id="yuyue">
+		<div>
+		<section class="Reservations">
+			<div class="container">
+				<div class="row">
+					<div class="yuyue-goumai">
+						<form action="">
+							<div class="form-group">
+								<div>
+									<input type="text" class="form-control" placeholder="您的姓名">
+								</div>
+							</div>
+							<div class="form-group">
+								<div>
+									<input type="text" class="form-control" placeholder="联系方式">
+								</div>
+							</div>
+							<div class="form-group">
+								<div>
+									<input type="text" class="form-control" placeholder="您的地址">
+								</div>
+							</div>
+							<div class="form-group">
+								<div>
+									<input type="text" class="form-control" placeholder="预约产品">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label">付款方式</label>
+								<div>
+									<div class="radio">
+										<input type="radio" name="options-radios" id="options-radios1" value="option1" checked>
+									  	<label>全额预约</label>
+									</div>
+									<div class="radio">							
+										<input type="radio" name="options-radios" id="options-radios2" value="option2">
+									   <label>预定金付款</label>
+									</div>
+									<div class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+									  	<label>货到付款</label>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="form-group yanzheng1">
+								<input class="form-control" type="text" placeholder="验证码" data-fv-message="不能为空" id="yanzheng1" onkeyup="yanzhengs()">
+								<div class="yanzhengma2 fr">
+									<img src="/images/about/m1.png" alt="" style="display: block">
+									<img src="/images/about/entrance%20(1).png" alt="" >
+									<img src="/images/about/entrance%20(2).png" alt="" >
+									<img src="/images/about/entrance%20(3).png" alt="" >
+									<img src="/images/about/entrance%20(4).png" alt="" >
+									<img src="/images/about/entrance%20(5).png" alt="" >
+									<img src="/images/about/entrance%20(6).png" alt="" >
+									<img src="/images/about/entrance%20(7).png" alt="" >
+									<img src="/images/about/entrance%20(8).png" alt="" >
+									<img src="/images/about/entrance%20(9).png" alt="" >
+									<img src="/images/about/entrance%20(10).png" alt="" >
+								</div>
+								<div class="panduan"></div>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-lg btn-tijiao">提交</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+	</template>
+	<!-- 售后服务 -->
+	<template id="shouhou">
+		<div>
+		<section class="after-sale">
+			<h1 class="shouhou">售后服务</h1>
+			<h2 class="liucheng">服务流程</h2>
+			<div class="jincheng">
+				<ul>
+					<li>
+						<div class="jin-top">
+							<aside class="circle-box">1</aside>
+							<label>发起售后</label>
+						</div>
+						<div class="jin-title">您可以登录锤子科技官方网站在个人中心发起售后服务要求</div>
+					</li>
+					<li>
+						<div class="jin-top">
+							<aside class="circle-box">2</aside>
+							<label>客服确认</label>
+						</div>
+						<div class="jin-title">客服会在 2 个工作日内与您电话或短信联系并确认您的售后服务要求</div>
+					</li>
+					<li>
+						<div class="jin-top">
+							<aside class="circle-box">3</aside>
+							<label>退换修</label>
+						</div>
+						<div class="jin-title">您可于 7 天内到距离最近的维修门店办理售后服务，或直接将商品邮寄到售后服务中心</div>
+					</li>
+				</ul>
+			</div>
+			<h2 class="liucheng">重要提示</h2>
+			<div class="important">
+				<ol>
+					<li>1、根据 2017 年 1 月 6 日国家工商行政管理总局令第 90 号公布的《网络购买商品七日无理由退货暂行办法》，手机激活后将不适用七日无理由退货规定；</li>
+					<li>2、7 天无理由退货前请确认没有外观类使用痕迹、无人为损坏后，将全部包装配件一起寄回，退回运费将由用户承担；</li>
+					<li>3、寄出手机前请您提前备份所有数据信息、取消开机密码、退出欢喜云并取出 SIM 卡；</li>
+					<li>4、三包期内性能故障（非人为原因）导致的商品退换货和维修服务，将由锤子科技承担快递费用。请您先行垫付快递费用，快递单上请注明实际运费。快递纸质发票请随商品一起寄回，电子发票请发邮件至 FP@smartisan.com 用于邮资报销（抬头：北京锤子数码科技有限公司，纳税人识别号：9111030239988517XL）。我们将依据您的快递发票实报实销，手机产品最高限额为 20 元/单。</li>
+				</ol>
+			</div>
+			<h2 class="liucheng">联系客服</h2>
+			<div class="kefu">
+				<ul>
+					<li>
+						<a href="javascript:void(0)">
+							<img src="/images/about/weixin.bfd8e019e906b3f1251bedaf4fa783af.png" alt="">
+						</a>
+						<p style="color:#999">微信客服</p>
+						<p style="color:#c2c2c2">9:00-21:00</p>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<img src="/images/about/duanxin.ee3eb64cdb27485c5be44428a43c651e.png" alt="">
+						</a>
+						<p style="color:#999">在线客服</p>
+						<p style="color:#c2c2c2">9:00-18:00</p>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<img src="/images/about/weibo.8b2cd860806811e662c7c4e82934ed88.png" alt="">
+						</a>
+						<p style="color:#999">微博客服</p>
+						<p style="color:#c2c2c2">9:00-24:00</p>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<img src="/images/about/jingdong.c30c88fa05d2047e7db5f50abeba089b.png" alt="">
+						</a>
+						<p style="color:#999">京东客服</p>
+						<p style="color:#c2c2c2">9:00-24:00</p>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<img src="/images/about/tianmao.d514f9ecb59d62a78871c1053549d495.png" alt="">
+						</a>
+						<p style="color:#999">天猫客服</p>
+						<p style="color:#c2c2c2">9:00-24:00</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		</div>
+	</template>
+
+
+	<script src="/js/service.js"></script>
+<%include ./index_footer.ejs%>

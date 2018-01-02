@@ -1,0 +1,185 @@
+<% include ./index_header.ejs %>
+    <div id="container">
+        <section>
+            <div class="col-sm-12 sec-box">
+                <div class="container">
+                    <!--轮播图-->
+                    <div id="carousel-example-generic" class="carousel slide rotate-box" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="./images/index/1495532510.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="./images/index/1495598299.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--商品栏-->
+                    <div class="shop-column col-sm-12">
+                        <div class="col-sm-3 shop-column-single" v-for="(item,index) of shops" :key=index>
+                            <a :href=item.href>
+                                <div class="shop-box-img">
+                                    <img :src=item.img alt='' :title=item.tit>
+                                </div>
+                                <h4>{{item.tit}}</h4>
+                            </a>
+                            <p>
+                                <i>·</i>
+                                &nbsp;{{item.txt}}&nbsp;
+                                <i>·</i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--热门商品-->
+                    <div class="shop-hot col-sm-12">
+                        <div class="area-title">
+                            <h3>热门商品</h3>
+                            <p>Hot</p>
+                            <div class="shop-m">
+                                <span href=""> < </span>
+                                <span href=""> > </span>
+                            </div>
+                        </div>
+                        <div class="shop-phone-list01">
+                            <div class="shop-single" v-for="(item,index) of shopHot">
+                                <div class="shop-column-single shop-mouse" @mouseenter="change(index)"
+                                     @mouseleave="recover(index)">
+                                    <div class="phone-img">
+                                        <a href="./shopCart" @click="intoCart(index)">
+                                            <div class="shop-box-img phone-box phone-id">
+                                                <img :src=shopImg.img alt="" v-for="(shopImg,index) of item.phoneImg"
+                                                @load="posImg(index)" :title=item.content.title>
+                                            </div>
+                                        </a>
+                                        <ul class="phone-list">
+                                            <li v-for="(clk,index) of item.phoneImg"></li>
+                                        </ul>
+                                    </div>
+                                    <h4 class="shop-tit">
+                                        <a href="">{{item.content.title}}</a>
+                                        <p class="detail">{{item.content.txt}}</p>
+                                        <span class="btn-detail-index">
+                                    <a href="./shopCart" title="坚果Pro" class="pro"
+                                       @click="intoCart(index)">查看详情</a>
+                                    <p class="phone-price">{{item.content.price | filterPrice}}</p>
+                                </span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--官方精选-->
+                    <div class="shop-select col-sm-12">
+                        <div class="area-title">
+                            <h3>官方精选</h3>
+                            <p>Offical</p>
+                            <div class="shop-look">
+                                <span onclick="window.location.href = '/ksy/hotProduct'"> 查看更多 ></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 select-list">
+                            <div class="shop-phone-list shop-select-list">
+                                <div class="shop-select-sec col-sm-6">
+                                    <a href="">
+                                        <img src="./images/index/1495857931.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="shop-select-single col-sm-3 col-xs-6" v-for="(item,index) of shopHot">
+                                    <div class="shop-column-single shop-mouse" @mouseenter="change(index)"
+                                         @mouseleave="recover(index)">
+                                        <div class="phone-img">
+                                            <a href="./shopCart" @click="offCart(index)">
+                                                <div class="shop-box-img select-phone-box phone-id">
+                                                    <img :src=selectImg.img alt="" v-for="(selectImg,index) of item.phoneImg"
+                                                         @load="posImg(index)" :title=item.content.title>
+                                                </div>
+                                            </a>
+                                            <ul class="phone-list">
+                                                <li v-for="(clk,index) of item.phoneImg"></li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="shop-tit">
+                                            <a href="">{{item.content.title}}</a>
+                                            <p class="detail">{{item.content.txt}}</p>
+                                            <span class="btn-detail-index">
+                                    <a href="./shopCart" title="坚果Pro" class="pro-select"
+                                       @click="intoCart(index)">查看详情</a>
+                                    <p class="phone-price-sel">{{item.content.price | filterPrice}}</p>
+                                </span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--应用-->
+                    <div class="col-sm-12 shop-apply">
+                        <div class="area-title">
+                            <h3>应用</h3>
+                            <p>Apps</p>
+                            <div class="shop-look">
+                                <span href=""> 查看更多 ></span>
+                            </div>
+                        </div>
+                        <div class="apply-sec">
+                            <div class="apply-list">
+                                <div class="apply-single col-sm-3 col-xs-6" v-for="(item,index) of apply"
+                                     @mouseenter="showTxt(index)" @mouseleave="hideTxt(index)">
+                                    <a href="">
+                                        <img :src=item.img alt="">
+                                    </a>
+                                    <div class="apply-txt">
+                                        <p class="app-p01">{{item.tit01}}</p>
+                                        <p class="app-p02">{{item.tit02}}</p>
+                                        <a href="" class="txt-a">进一步了解 <i class="txt-i">></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--科学动态-->
+                    <div class="col-sm-12 shop-science">
+                        <div class="area-title">
+                            <h3>科学动态</h3>
+                            <p>Science</p>
+                            <div class="shop-look">
+                                <span onclick="window.location.href = '/ksy/new_center'"> 查看更多 ></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 science-sec">
+                            <div class="col-sm-12 new-list">
+                                <div class="col-xs-12 col-sm-3 new-single" v-for="(item,index) of newScience">
+                                    <div class="new-box">
+                                        <a href="">
+                                            <img :src=item.img alt="">
+                                        </a>
+                                        <div class="new-text">
+                                            <h4>
+                                                <a href="">{{item.newTit}}</a>
+                                            </h4>
+                                            <p>{{item.newTxt}}</p>
+                                            <a href="" class="more">阅读更多<i>></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<script src="./js/index-vue.js"></script>
+
+ <% include ./index_footer.ejs%>

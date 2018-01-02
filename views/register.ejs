@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>注册页面</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	 <link rel="stylesheet" href="./css/boot/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/register.css">
+	<!--让IE8 支持HTML5新标签 和 Media-->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="login-header">
+		<div class="row row-header">
+			<div class="col-xs-6 col-sm-6 login-logo">
+				<ul>
+					<li><a href="./index"><img src="./images/about/1495680343.png" alt="返回首页" title="返回首页"></a></li>
+					<li><i>|</i>会员注册</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 主体部分 -->
+	<div class="re-main">
+		<div class="re-box">
+			<div class="re-content">
+				<form onsubmit="return zhuce()" id="myForm">
+					<span class="zhuce-header">会员注册</span>
+					<div class="form-group">
+						<span class="left fl"><i class="fa fa-user" aria-hidden="true"></i></span>
+						<input id="username" type="text" class="fl" placeholder="会员名" onblur="user()">
+						<br style="clear:both">
+						<div class="panduan"></div>
+					</div>
+					
+					<div class="form-group">
+						<span class="left fl"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+						<input id="email" type="text" class="fl" placeholder="邮箱"  onblur="emails()">
+						<br style="clear:both">
+						<div class="panduan"></div>
+					</div>
+					<div class="form-group">
+						<span class="left fl"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+						<input id="pwd" type="password" class="fl" placeholder="密码" onblur="pwds()">
+						<br style="clear:both">
+						<div class="panduan"></div>
+					</div>
+					
+					<div class="form-group">
+						<span class="left fl"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+						<input id="repwd" type="password" class="fl" placeholder="重复密码" onblur="repwds()">
+						<br style="clear:both">
+						<div class="panduan"></div>
+					</div>
+
+					<div class="form-group yanzheng">
+						<span class="left fl"><i class="fa fa-shield" aria-hidden="true"></i></span>
+						<input id="yanzheng" type="text" class="fl" placeholder="验证码" onkeyup="yanzhengs()" autocomplete="off">
+						<div class="yanzhengma fr">
+							<div id="yzm"><img src="" alt=""></div>
+						</div>
+						<br style="clear:both">
+						<div class="panduan"></div>
+					</div>
+
+					<button type="button" class="btn btn-info btn1" onclick="zhuce()">立即注册</button>
+					<span class="go-login fr">已经有账号了？去<a href="./login">登录</a></span>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer脚部 -->
+	<div class="login-footer container">
+		<p>
+			Copyright © 2017, MetInfo Digital Co., Ltd. All Rights Reserved.
+		</p>
+		<p>
+			官方在线商城
+		</p>
+	</div>
+
+	<!--[if gt IE 8]> <!-->
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<!--<![endif]-->
+
+	<!--[if lte IE 8]>
+	<script src="./js/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+	<script src="./js/register.js"></script>
+	<script src="./js/yanzhengma.js"></script>
+</body>
+</html>

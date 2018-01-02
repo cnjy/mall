@@ -1,0 +1,102 @@
+<% include ./personal_header %>
+<body>
+     <div class="personal">
+        <div class="container">
+            <div class="page-content">
+                <div class="col-md-12 menu-list menu">
+                    <button class="btn btn-primary btn-block dropdown-toggle">我的订单
+                        <i class="glyphicon glyphicon-triangle-bottom"></i>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <% include ./personal_content %>
+                </div>
+                <div class="col-md-9 shop-profile">
+                    <div class="card-content">
+                        <div class="panel-body">
+                            <button class="btn btn-success addr-btn btn-squared add">添加收货地址</button>
+                            <div class="addr-body">
+                                <ul class="site-list"> 
+                                <% for(var i = 0; i < result.length; i ++){%>
+                                    <li class="rem" data_id=<%= result[i].id%>>
+                                        <a href="#" class="col-sm-12 site-single">
+                                            <div class="addr-set">
+                                                <i class="glyphicon glyphicon-edit" onclick="changeSite(
+                                                <%= result[i].id%>,'<%= result[i].name%>','<%= result[i].phone%>',
+                                                        '<%= result[i].site%>','<%= result[i].text%>')"></i>
+                                                <i class="glyphicon glyphicon-trash" onclick="remSite(<%= i%>,
+                                                <%= result[i].id%>)"></i>
+                                            </div>
+                                            <h4><%= result[i].name%></h4>
+                                            <p class="site-p01"><%= result[i].phone%></p>
+                                            <p class="site-p02">
+                                                <%= result[i].site%>
+                                                <%= result[i].text%>
+                                            </p>
+                                        </a>
+                                    </li>
+                                <% }%>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add-site-body">
+        <div class="add-site">
+            <div class="site-content">
+                <div class="modal-header">
+                    <h4>收货地址
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </h4>
+                </div>
+                <form action="" class="site-form" id="myForm">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" placeholder="收货人姓名" class="form-control name">
+                            <span class="form-control-label">此项不能为空</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="收货人电话" class="form-control phone">
+                            <span class="form-control-label">此项不能为空</span>
+                        </div>
+                        <div class="form-group">
+                           <select name="zon_p" id="" class="site-sel">
+                               <option value="">请选择所在地区</option>
+                               <option value="北京市">北京市</option>
+                               <option value="天津市">天津市</option>
+                               <option value="河北省">河北省</option>
+                               <option value="山西省">山西省</option>
+                               <option value="内蒙古自治区">内蒙古自治区</option>
+                               <option value="辽宁省">辽宁省</option>
+                               <option value="吉林省">吉林省</option>
+                               <option value="黑龙江省">黑龙江省</option>
+                               <option value="上海市">上海市</option>
+                               <option value="江苏省">江苏省</option>
+                               <option value="浙江省">浙江省</option>
+                               <option value="安徽省">安徽省</option>
+                               <option value="福建省">福建省</option>
+                               <option value="江西省">江西省</option>
+                               <option value="山东省">山东省</option>
+                               <option value="广东省">广东省</option>
+                               <option value="四川省">四川省</option>
+                           </select>
+                           <span class="form-control-label">此项不能为空</span>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="3" placeholder="详细地址" class="form-control detail-site"></textarea>
+                            <span class="form-control-label">此项不能为空</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary btn-squared">保 存</button>
+                        <button type="button" class="btn btn-default btn-squared rem-btn">取 消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src='./js/personal/site.js'></script>
+<%include ./footer2.ejs%>

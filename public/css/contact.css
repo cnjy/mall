@@ -1,0 +1,269 @@
+/*关于公司*/
+.company-title{
+	width: 100%;
+	padding-top:20px;
+	box-sizing:border-box;
+}
+.met-com-nav-ul{
+	width: 100%;
+	height: 59px;
+	font-size:0;
+}
+.met-com-nav-ul li{
+	width:10%;
+	height: 58px;
+	display:inline-block;
+	line-height:58px;
+}
+@media(max-width:768px){
+	.met-com-nav-ul li{
+		width:21%;
+	}
+
+}
+.com-link{
+	width: 100%;
+	height: 100%;
+	box-sizing:border-box;
+	display:block;
+	font-size:12px;
+	color:#999;
+}
+.com-link:hover{
+	color:#5079d9;
+}
+/*联系我们*/
+.contact-box{
+	clear:both;
+	width: 100%;
+	background:#fff;
+	border-radius:8px;
+	border:1px solid #aaa;
+	padding:30px;
+	margin-bottom:50px;
+}
+.contact-content{
+	width: 100%;
+	height: 100%;
+}
+.contact-content div p{
+	text-align:center;
+	height: 32px;
+	margin-bottom:16px;
+}
+.contact-content div p span{
+	font-size:13px;
+}
+.table-bordered thead tr{
+	height:100%;
+}
+.table-bordered thead tr th{
+	width: 30%;
+}
+.contact-item{
+	width: 100%;
+	height: 178px;
+}
+.contact-item img{
+	width: 100%;
+	height: 100%;
+}
+.table>thead>tr>th{
+	border-bottom:0;
+}
+@media(max-width:990px){
+	th:nth-child(3){
+		display:none;
+	}
+	.table-bordered thead tr th{
+		width: 50%;
+	}
+}
+@media(max-width:518px){
+	.table-bordered thead tr th{
+		width: 100%;
+	}
+	th:nth-child(2){
+		display:none;
+	}
+	.met-com-nav-ul{
+		height:45px;
+	}
+	.company-title{
+		padding-top:0;
+	}
+	
+}
+@media(min-width:519px){
+	.jiantou{
+		display:none;
+	}
+
+}
+.jiantou{
+	width: 110px;
+	height: 46px;
+	float:right;
+}
+.jiantou>a{
+	display:inline-block;
+	color:#ccc;
+}
+.jiantou>a:hover{
+	color:#ccc;
+}
+.con-left,.con-right{
+	border:1px solid #ccc;
+	border-radius:4px;
+	padding:4px 8px;
+	margin:9px 9px 0px 9px;
+}
+/*点击出现的三张图片*/
+.contact-table-hide{
+	position:fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,.5);
+	z-index:333;
+	display:none;
+}
+.table-hide-item{
+	position:relative;
+	width: 100%;
+	height: 100%;
+	margin-left:auto;
+	margin-right:auto;	
+}
+.table-hide-list{
+	clear:both;
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+}
+.hide-list-prev,
+.hide-list-content,
+.hide-list-next{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display:inline-block;
+	margin:0 5px;
+	white-space: nowrap;
+}
+.hide-list-img{
+	position:absolute;
+	left:50%;
+	top:50%;
+	padding:0 5px;
+	display:inline-block;
+	transform:translate(-50%,-50%);
+}
+.table-hide-header{
+	width: 100%;
+	height: 60px;
+	background:#000;
+}
+
+.table-hide-header div{
+	padding-top:20px;
+	padding-right:20px;
+	float:right;
+}
+.table-hide-header div span,.glyphicon-save{
+	box-sizing:border-box;
+	padding-left:30px;
+	font-size:18px;
+	color:#ccc;
+	cursor:pointer;
+}
+.table-hide-header div span:hover,.glyphicon-save:hover{
+	color:#fff;
+}
+.table-hide-jiantou{
+	position:absolute;
+	top:50%;
+	width: 100%;
+}
+.jiantou-left,
+.jiantou-right{
+	font-size:22px;
+	padding:8px 10px 9px 10px;
+	background:#0D0A0A;
+	color:rgba(255,255,255,.5);
+}
+.jiantou-left:hover,
+.jiantou-right:hover{
+	color:#fff;
+}
+.jiantou-right{
+	float:right;
+	margin-right:20px;
+}
+.jiantou-left{
+	float:left;
+	margin-left:20px;
+}
+.table-hide-footer{
+	clear:both;
+	background:#0D0A0A;
+	height: 84px;
+	width: 100%;
+	position:absolute;
+	bottom:0;
+	
+}
+.hide-footer-list{
+	width: 220px;
+	padding:10px 0;
+	margin-bottom: -5px;
+	height:100%;
+	box-sizing:border-box;
+}
+.footer-thumb-item{
+	width: 64px;
+	margin-right:5px;
+	height: 100%;
+	overflow:hidden;
+	/*border:2px solid #fff;
+	border-radius:4px;*/
+	float:left;
+}
+/*.footer-active:hover{
+	border-color:red;
+}*/
+.footer-thumb-item img{
+	border:2px solid #fff;
+	border-radius:4px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;/*控制图片不变形*/
+}
+.footer-tubiao{
+	background:#0D0A0A;
+	position:absolute;
+	right:20px;
+	top:-39px;
+	padding:5px 0;
+	line-height:27px;
+	border-radius:2px 2px 0 0;
+	cursor:pointer;
+	font-size:24px;
+	height:39px;
+	text-align:center;
+	width:50px;
+	color:rgba(255,255,255,.5);
+}
+.footer-tubiao:hover{
+	color:#fff;
+}
+.for-footer{
+	position:absolute;
+	bottom:0;
+	width: 100%;
+	height: 84px;
+}

@@ -1,0 +1,142 @@
+.nav-tab {
+    border-bottom: 1px solid #e4eaec;
+    position: relative;
+}
+.nav-tab>li{
+    display: inline-block !important;
+    margin-bottom: -1px;
+    font-size: 15px;
+}
+.nav-tab>li>a{
+    display: block;
+    color: #76838f;
+    transition: all .3s;
+    padding:15px 30px !important;
+    border-bottom: 2px solid transparent;
+}
+.nav-tab>li>a:hover{
+    background-color: #fff !important;
+    border-bottom-color: #ccd5db;
+    text-decoration: none;
+}
+.order-shop-keyword{
+    margin: 20px 0;
+}
+.input-search {
+    position: relative;
+}
+.input-search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 0 200px 200px 0;
+    background: 0 0;
+}
+.form-control{
+    padding-right: 50px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+}
+.order-list-box{
+    margin-bottom: 30px;
+    padding: 0px 20px 20px;
+    border: 1px solid #E4EAEC;
+    border-color: #f96868;
+}
+.list-box-top{
+    margin: 0px -15px;
+    margin-bottom: 20px;
+    padding-top: 16px;
+}
+.list-box-bottom{
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-top: 1px solid #f96868;
+    padding-top: 10px;
+}
+.ting{
+    padding-bottom: 20px;
+}
+.ting>h4{
+    color: #f96868;
+    font-size: 21px;
+}
+.info{
+    margin-right: 10px;
+}
+.media-xs{
+    margin-top: 6px;
+    display: flex;
+}
+.media-xs-left{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.media-xs-left>a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+.media-xs-left>a>img{
+    width: 100%;
+}
+.media-xs-body>h4{
+    font-size: 15px;
+}
+.media-xs-body>h4>a{
+    color: #526069;
+    transition: all .3s;
+}
+.media-xs-body>h4>a:hover{
+    color: #000;
+    text-decoration: none;
+}
+.btn-squared{
+    display: inline-block;
+    padding:8px 20px;
+    margin-top: 15px;
+}
+.sel-to{
+    color: #62a8ea !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid #62a8ea !important;
+    background-color: transparent !important;
+}
+.order-title{
+    text-align: center;
+    overflow: hidden;
+    padding: 50px;
+}
+.title-box{
+    display: inline-block;
+    vertical-align: middle;
+    color: #76838f;
+    font-size: 18px;
+}
+.price{
+    color: #f96868;
+    font-size: 17px;
+}
+.menu{
+    margin-bottom: 15px;
+}
+.menu-list{
+    display: none;
+}
+.menu-list i{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 25px;
+    margin-left: 2px;
+
+}
+@media screen and (max-width: 990px) {
+    .menu-list{
+        display: block;
+    }
+}
